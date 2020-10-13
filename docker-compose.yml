@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  reactstarter:
+    image: reactstarter
+    build: .
+    environment:
+      NODE_ENV: development
+    ports:
+      - 3000:3000
+    volumes: 
+      - .:/usr/src/app
+    stdin_open: true
