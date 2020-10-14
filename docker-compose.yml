@@ -6,8 +6,11 @@ services:
     build: .
     environment:
       NODE_ENV: development
+      CHOKIDAR_USEPOLLING: "true"
     ports:
       - 3000:3000
     volumes: 
       - .:/usr/src/app
-    stdin_open: true
+    stdin_open: true  
+     
+    
