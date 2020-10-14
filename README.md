@@ -1,3 +1,16 @@
+# PROJECT
+- Crate boileplate / starter code for apps
+- Tech: TypeScript - React - Redux - Express (...MongoDB)
+- Utilities: Login + Chat + Admin 
+
+## DOCS & TUTORIALS
+- https://react-redux.js.org/introduction/basic-tutorial
+- https://dev.to/loujaybee/using-create-react-app-with-express
+- https://medium.com/@anwesha_das/a-strongly-typed-create-react-app-with-an-express-api-server-44e2334ccc71
+- https://reactrouter.com/web/guides/quick-start
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
