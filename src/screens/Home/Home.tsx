@@ -23,7 +23,8 @@ export default function Home(): ReactElement {
                 <img src={logo} className="App-logo" alt="logo" />
                 <p>Boiler Plate:
                     </p>
-                <p> React - TypeScript - Docker - Redux -  </p>
+                <p> React - TypeScript - Docker - Redux - MongoDB </p>
+                <p>Moongoose</p>
                 <p>  {data}   </p>
                 <a
                     className="App-link"

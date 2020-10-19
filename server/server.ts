@@ -1,5 +1,9 @@
 import bodyParser from 'body-parser';
 import express from 'express';
+
+
+import models, { connectDb } from './models';
+
 import { postMessages, putMessage } from './routes/messages';
 import { getUser } from './routes/users';
 
@@ -18,4 +22,10 @@ app.post('/api/messages', postMessages);
 app.put('/api/messages/:id', putMessage);
 
 // tslint:disable-next-line:no-console
+connectDb().then(() => console.log('DB Connected!'))
+.catch(err => {
+console.log(`DB Connection Error:', ${err}`);
+});
+
+
 app.listen(port, () => console.log(`Listening on port ${port}`));
