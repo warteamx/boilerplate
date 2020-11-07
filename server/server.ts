@@ -2,12 +2,15 @@ import bodyParser from 'body-parser';
 import express from 'express';
 
 
+
 import models, { connectDb } from './models';
 
 import { postMessages, putMessage } from './routes/messages';
 import { getUser } from './routes/users';
 
 import { test } from './routes/test';
+
+const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -25,6 +28,15 @@ app.get('/api/users/:id', getUser);
 
 app.post('/api/messages', postMessages);
 app.put('/api/messages/:id', putMessage);
+
+
+/**
+ * PROD: 
+ * in production mode server and index are on the same folder ( In developer mode there is no index file)
+ *   */ 
+app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname + '/index.html'));
+  });
 
 // tslint:disable-next-line:no-console
 connectDb().then(() => console.log('DB Connected!'))

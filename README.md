@@ -13,6 +13,10 @@
 - https://www.freecodecamp.org/news/how-to-use-redux-in-your-react-typescript-app/
 - https://codesandbox.io/s/react-redux-typescript-oc4hi?file=/src/App.tsx
 
+DOCKER PROD vs DEV
+ - https://dev.to/alex_barashkov/using-docker-for-nodejs-in-development-and-production-3cgp
+ - https://medium.com/@shakyShane/lets-talk-about-docker-artifacts-27454560384f
+ 
 
 ## Possible Issues
 - Server is run on ts-dev package, not suitable for production. For production, create a build
