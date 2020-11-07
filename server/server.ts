@@ -7,11 +7,16 @@ import models, { connectDb } from './models';
 import { postMessages, putMessage } from './routes/messages';
 import { getUser } from './routes/users';
 
+import { test } from './routes/test';
+
 const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// user
+app.get('/api/test', test);
 
 // user
 app.get('/api/users/:id', getUser);

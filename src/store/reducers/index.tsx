@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
-import todos from './todos'
-import visibilityFilter from './visibilityFilter'
+import messages from './messages'
+import test from './test'
 
-export default combineReducers({
-  todos,
-  visibilityFilter
+export const rootReducer = combineReducers({
+  messages,
+  test
 })
+
+export type RootState = ReturnType<typeof rootReducer>
