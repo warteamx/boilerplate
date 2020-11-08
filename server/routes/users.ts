@@ -1,4 +1,4 @@
-import { model } from 'mongoose';
+// import { model } from 'mongoose';
 import models from '../models/index'
 
 export const getUser = async (req: any, res: any) => {
