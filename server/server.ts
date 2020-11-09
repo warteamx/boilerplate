@@ -4,7 +4,7 @@ import cors from 'cors';
 
 
 
-import models, { connectDb } from './models';
+import { connectDb } from './models';
 
 import { postMessages, putMessage } from './routes/messages';
 import { getUser } from './routes/users';
