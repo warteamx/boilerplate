@@ -2,4 +2,7 @@
 /server
 /.circleci
 /public
-/www/node_modules
+*.md
+/.vscode
+/node_modules
+/PROD
