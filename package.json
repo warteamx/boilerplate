@@ -38,7 +38,7 @@
     "startReact": "react-scripts start",
     "deploy": "gcloud app deploy PROD/app.yaml",
     "build": "react-scripts build && mkdir PROD && mv build PROD/build && tsc -p server/ && cp package.prod.json PROD/package.json && cp app.yaml PROD/app.yaml ",
-    "test": "react-scripts test a",
+    "test": "cross-env CI=true react-scripts test ",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
