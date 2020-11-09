@@ -9,7 +9,7 @@ export default function Home(): ReactElement {
     return (
 <>
 <Header />
-<h1> Boiler plate for MERN stack </h1>
+<h1 className="App-title" > Boiler plate for MERN stack </h1>
 </>
     )
 }
