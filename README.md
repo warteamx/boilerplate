@@ -1,8 +1,29 @@
 # PROJECT
-- Create Development boileplate / starter code for apps
-- Tech: TypeScript - React - Redux - Express
-- Next (...MongoDB - CD/CI - Test Suites)
-- Utilities: Login + Chat + Admin 
+- A Development boileplate / starter code for apps
+- Tech: TypeScript - React - Redux - Express 
+- Using CD/CI with Google Cloud Build for Test, Build and Deploy workflow on main git branch
+- Changelog - https://keepachangelog.com/en/1.0.0/
+- Deploy in Google App Engine URL: https://boilerplate-mern.ey.r.appspot.com/
+
+## Next 
+- Apollo GraphQL Express
+- Login Funcionality 
+- Admin Panel
+- Charts Library
+- PrimeReact UI 
+
+## Available Scripts
+ - This project has a Docker container Dev Mode (Node + MongoDB)
+ - Also For DB we can use Atlas MongoDB with an .env variable
+ - To deploy on the Google App Engine we use Google Build (cloudbuild.yaml)
+
+### Docker 
+ To run the project in DEV Mode with Docker: 
+- docker-compose up -d
+### Local 
+To run the project in Dev Mode locally
+- npm run startDev 
+
 
 ## DOCS & TUTORIALS
 - https://www.robinwieruch.de/mongodb-express-setup-tutorial
@@ -26,8 +47,4 @@ DOCKER PROD vs DEV
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-### FULL STACK Docker 
- To run the project: 
-- docker-compose up -d
