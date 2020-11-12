@@ -2,7 +2,7 @@
 - A Development boileplate / starter code for apps
 - Tech: TypeScript - React - Redux - Express 
 - Using CD/CI with Google Cloud Build for Test, Build and Deploy workflow on main git branch
-- Changelog - https://keepachangelog.com/en/1.0.0/
+- Gitmoji Changelog - https://docs.gitmoji-changelog.dev/#/
 - Deploy in Google App Engine URL: https://boilerplate-mern.ey.r.appspot.com/
 
 ## Next 
