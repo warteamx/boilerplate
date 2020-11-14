@@ -1,15 +1,15 @@
-import React, { ReactElement } from 'react'
-import '../../App.css';
+import React from 'react';
+import Footer from '../../components/elements/Footer/Footer';
 import Header from '../../components/elements/Header/Header'
+import Home from '../../components/modules/Home/Home';
 
-
-export default function Home(): ReactElement {
-
+export default function HomeScreen() {
 
     return (
-<>
-<Header />
-<h1 className="App-title" > Boiler plate for MERN stack </h1>
-</>
-    )
+        <>
+            <Header />
+            <Home />
+            <Footer title="MERN APP" subtitle="Boilerplate code for an example of a MERN App" />
+        </>
+    );
 }

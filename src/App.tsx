@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, Store } from 'redux'
 import {rootReducer, RootState} from './store/reducers'
@@ -14,6 +12,7 @@ const store : Store <RootState> & {
 } = createStore(rootReducer , applyMiddleware(thunk))
 
 function App() {
+
   return (
     <Provider store={store}>
       <Routes />

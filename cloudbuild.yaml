@@ -5,6 +5,8 @@ steps:
 - name: node
   entrypoint: npm
   args: ['test']
+  env:
+    - "CI=true"
   timeout: '120s'
 - name: node
   entrypoint: npm

@@ -3,6 +3,7 @@
 - Tech: TypeScript - React - Redux - Express 
 - Using CD/CI with Google Cloud Build for Test, Build and Deploy workflow on main git branch
 - Gitmoji Changelog - https://docs.gitmoji-changelog.dev/#/
+- UI: PrimeReact https://www.primefaces.org/primereact/
 - Deploy in Google App Engine URL: https://boilerplate-mern.ey.r.appspot.com/
 
 ## Next 

@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="0.3.0"></a>
+## 0.3.0 (2020-11-14)
+
+### Added
+
+- ✨ Add Material UI [[218e593](https://github.com/martinrebo/boilerplate/commit/218e593f5c4772dc7f5793800929edb42a6c05d5)]
+
+
 <a name="0.2.3"></a>
 ## 0.2.3 (2020-11-14)
 
