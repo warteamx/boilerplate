@@ -1,10 +1,5 @@
 import React from 'react';
 
-import 'primereact/resources/themes/saga-blue/theme.css';
-import 'primereact/resources/primereact.min.css';
-import 'primeicons/primeicons.css';
-import PrimeReact from 'primereact/utils';
-
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, Store } from 'redux'
 import {rootReducer, RootState} from './store/reducers'
@@ -17,7 +12,7 @@ const store : Store <RootState> & {
 } = createStore(rootReducer , applyMiddleware(thunk))
 
 function App() {
-  PrimeReact.ripple = true
+
   return (
     <Provider store={store}>
       <Routes />

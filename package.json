@@ -1,17 +1,17 @@
 {
   "name": "react-starter",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "proxy": "http://localhost:5000/",
   "homepage": "https://boilerplate-mern.ey.r.appspot.com/",
   "private": true,
   "dependencies": {
     "apollo-server-express": "^2.19.0",
-    "body-parser": "^1.19.0",   
+    "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "graphql": "^15.4.0",
     "graphql-tools": "^7.0.1",
-    "mongoose": "^5.10.9"  
+    "mongoose": "^5.10.9"
   },
   "scripts": {
     "startDEV:server": "cd server && ts-node-dev --respawn --transpile-only ./server.ts && wait-on tcp:5000",
@@ -64,6 +64,6 @@
     "react-transition-group": "^4.4.1",
     "redux-thunk": "^2.3.0",
     "ts-node-dev": "^1.0.0-pre.64",
-    "typescript": "~3.7.2"
+    "typescript": "~3.8.0"
   }
 }
