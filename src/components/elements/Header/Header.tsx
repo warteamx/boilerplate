@@ -1,17 +1,29 @@
 import React, { ReactElement } from 'react'
-import { Link } from 'react-router-dom';
-import '../../../App.css';
+import AppBar from '@material-ui/core/AppBar';
+import CameraIcon from '@material-ui/icons/PhotoCamera';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core';
 
 
-export default function Home(): ReactElement {
+export default function Header(): ReactElement {
 
 
+    const useStyles = makeStyles((theme) => ({
+        icon: {
+            marginRight: theme.spacing(2),
+        }
+    }))
+
+    const classes = useStyles();
     return (
-        <div className="App">
-            <header className="App-header">
-                <Link className="App-link" to="/"> Home </Link>
-                <Link className="App-link" to="/checker"> Checker </Link>
-            </header>
-        </div>
+        <AppBar position="relative">
+            <Toolbar >
+                <CameraIcon className={classes.icon} />
+                <Typography variant="h6" color="inherit" noWrap>
+                    MERN APP
+          </Typography>
+            </Toolbar>
+        </AppBar>
     )
 }
