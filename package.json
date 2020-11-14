@@ -20,7 +20,7 @@
     "start": "node server.js",
     "deploy": "gcloud app deploy PROD/app.yaml",
     "build": "react-scripts build && mkdir PROD && mv build PROD/build && tsc -p server/ && cp package.json PROD/package.json && cp app.yaml PROD/app.yaml ",
-    "test": "CI=true react-scripts test ",
+    "test": "react-scripts test ",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
