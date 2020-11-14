@@ -1,7 +1,7 @@
 # Changelog
 
-<a name="0.2.2"></a>
-## 0.2.2 (2020-11-12)
+<a name="0.2.3"></a>
+## 0.2.3 (2020-11-14)
 
 ### Added
 
@@ -16,6 +16,10 @@
 ### Changed
 
 - 🎨 Improve structure of the code [[3f5afc0](https://github.com/martinrebo/boilerplate/commit/3f5afc083ffe5390840a0c6b72d227379898affc)]
+
+### Removed
+
+- ➖ Remove CircleCi [[189e954](https://github.com/martinrebo/boilerplate/commit/189e95435f72f9c4de4415c8f852f9e2b61a268f)]
 
 ### Fixed
 
