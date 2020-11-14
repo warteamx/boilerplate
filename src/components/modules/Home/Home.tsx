@@ -56,10 +56,10 @@ export default function Album() {
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
             <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-              MERN APP
+               MERN-APP-BOILERPLATE
             </Typography>
             <Typography variant="h5" align="center" color="textSecondary" paragraph>
-              Boilerplate Code for a MERN APP. Using Docker, Redux, Google Cloud, Material-UI. 
+              Boilerplate Code for a MERN. Using Docker, Redux, Google Cloud, Material-UI. 
             </Typography>
             <div className={classes.heroButtons}>
               <Grid container spacing={2} justify="center">
