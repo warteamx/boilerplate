@@ -17,7 +17,6 @@ export default function Footer({ title, subtitle }: Props): ReactElement {
       <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
         {subtitle}
       </Typography>
-      <Copyright />
     </footer>
 
   )

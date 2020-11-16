@@ -8,7 +8,7 @@ import { makeStyles } from '@material-ui/core';
 
 export default function Header(): ReactElement {
 
-
+    console.log(process.env.REACT_APP_VERSION)
     const useStyles = makeStyles((theme) => ({
         icon: {
             marginRight: theme.spacing(2),
@@ -21,8 +21,8 @@ export default function Header(): ReactElement {
             <Toolbar >
                 <CameraIcon className={classes.icon} />
                 <Typography variant="h6" color="inherit" noWrap>
-                    MERN APP
-          </Typography>
+                    MERN APP - { process.env.REACT_APP_VERSION}
+                </Typography>
             </Toolbar>
         </AppBar>
     )
