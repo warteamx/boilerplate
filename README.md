@@ -1,10 +1,11 @@
 # PROJECT
-- A Development boileplate / starter code for apps
-- Tech: TypeScript - React - Redux - Express 
-- Using CD/CI with Google Cloud Build for Test, Build and Deploy workflow on main git branch
-- Gitmoji Changelog - https://docs.gitmoji-changelog.dev/#/
-- UI: PrimeReact https://www.primefaces.org/primereact/
-- Deploy in Google App Engine URL: https://boilerplate-mern.ey.r.appspot.com/
+- *Description:* A Development boileplate / starter code for apps
+- *Tech:* TypeScript - React - Redux - Express 
+- *CD/CI:* Using CD/CI with Google Cloud Build for Test, Build and Deploy workflow on main git branch
+- *Changelog:* Gitmoji Changelog - https://docs.gitmoji-changelog.dev/#/
+- *UI:* PrimeReact https://www.primefaces.org/primereact/
+- *Tests:* Jest + React Testing Library
+- *Deployment:* Deploy in Google App Engine URL: https://boilerplate-mern.ey.r.appspot.com/
 
 ## Next 
 - Apollo GraphQL Express
@@ -26,7 +27,7 @@ To run the project in Dev Mode locally
 - npm run startDev 
 
 
-## DOCS & TUTORIALS
+## GUIDES & TUTORIALS
 - https://www.robinwieruch.de/mongodb-express-setup-tutorial
 - https://react-redux.js.org/introduction/basic-tutorial
 - https://dev.to/loujaybee/using-create-react-app-with-express
@@ -35,10 +36,16 @@ To run the project in Dev Mode locally
 - https://www.freecodecamp.org/news/how-to-use-redux-in-your-react-typescript-app/
 - https://codesandbox.io/s/react-redux-typescript-oc4hi?file=/src/App.tsx
 
-DOCKER PROD vs DEV
+### DOCKER PROD vs DEV
  - https://dev.to/alex_barashkov/using-docker-for-nodejs-in-development-and-production-3cgp
  - https://medium.com/@shakyShane/lets-talk-about-docker-artifacts-27454560384f
  
+### TESTING :
+#### Testing React
+- https://blog.sapegin.me/all/react-testing-1-best-practices/
+#### Testing Dates
+- https://dev.to/maxpou/how-to-mock-date-with-jest-3k4b
+- https://github.com/testing-library/dom-testing-library/issues/410
 
 ## Possible Issues
 - Server is run on ts-dev package, not suitable for production. For production, create a build
