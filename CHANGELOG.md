@@ -1,5 +1,32 @@
 # Changelog
 
+<a name="0.3.1"></a>
+## 0.3.1 (2020-11-19)
+
+### Added
+
+- ✅ Fix app test [[d7ae196](https://github.com/martinrebo/boilerplate/commit/d7ae196a466b04ec81bfd52e828b2195b3250a59)]
+- ✅ Add footer test [[aedc2e1](https://github.com/martinrebo/boilerplate/commit/aedc2e1952a49ede3fe54cb7bf2bff036bd520ec)]
+- ✅ Add copyright test [[12b0386](https://github.com/martinrebo/boilerplate/commit/12b03866383d7be8c47678eb40a0ddbd5fc5803f)]
+
+### Changed
+
+- ♻️ Refactor Home module [[2e3879b](https://github.com/martinrebo/boilerplate/commit/2e3879b79731f7e58b5e6a6f08dcd093a3d6296e)]
+- 🔧 Update packages [[1e704b0](https://github.com/martinrebo/boilerplate/commit/1e704b0daa305fc5c453d0fd8a80e15579c7fdf7)]
+
+### Fixed
+
+- 🐛 Delete Copyright [[65a6652](https://github.com/martinrebo/boilerplate/commit/65a6652ebb979e55d409dc4a0fa78014370bd6a2)]
+- 🐛 Fix CD/CI [[d113b6d](https://github.com/martinrebo/boilerplate/commit/d113b6d86b712751112ca87c3fb5a6836bd4eb1c)]
+- 🐛 Fix tests [[05a171a](https://github.com/martinrebo/boilerplate/commit/05a171a0b3a7b3abcf42dafc68a4faaf65c3e429)]
+- 🐛 Fix Test [[1848f45](https://github.com/martinrebo/boilerplate/commit/1848f45cf42251ada4dfcf0fb5a6c9bb0395a488)]
+
+### Miscellaneous
+
+-  Merge pull request [#5](https://github.com/martinrebo/boilerplate/issues/5) from martinrebo/issue-1-Create_Header_Component [[d1464ab](https://github.com/martinrebo/boilerplate/commit/d1464abfdfbb2a9c7722718cbe17cf0dcefa5942)]
+-  :fix: Fix test [[d846419](https://github.com/martinrebo/boilerplate/commit/d8464199d8a58df190a3acb0b83a1e326bd81cd7)]
+
+
 <a name="0.3.0"></a>
 ## 0.3.0 (2020-11-14)
 
