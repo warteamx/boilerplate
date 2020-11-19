@@ -1,4 +1,7 @@
 import React from 'react';
+
+import { Link } from 'react-router-dom';
+
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -55,6 +58,13 @@ const cards = [{
   image: "others",
   path: "others",
   disabled: true
+},{
+  id: 4,
+  heading: "Axpel",
+  description: "Technical test for Axpel consulting.",
+  image: "axpel",
+  path: "axpel",
+  disabled: false
 }]
 
 export default function Album() {
@@ -81,7 +91,7 @@ export default function Album() {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button size="small" color="primary" disabled={card.disabled}>
+                  <Button component={Link} to={`/${card.path}`} size="small" color="primary" disabled={card.disabled}>
                     See
                     </Button>
                 </CardActions>
