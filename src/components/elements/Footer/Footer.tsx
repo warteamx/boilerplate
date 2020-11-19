@@ -1,6 +1,5 @@
 import { Typography } from '@material-ui/core'
 import React, { ReactElement } from 'react'
-import Copyright from '../Copyright/Copyright'
 
 interface Props {
   title: string,
