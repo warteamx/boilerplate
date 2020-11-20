@@ -1,5 +1,7 @@
 import React, { ReactElement } from 'react'
 import ReactMarkdown from 'react-markdown'
+import gfm from 'remark-gfm'
+
 import Footer from '../../components/elements/Footer/Footer'
 import Header from '../../components/elements/Header/Header'
 import { solution } from '../exercise1/solution.js'
@@ -21,7 +23,7 @@ contempla los posibles escenarios futuros y su impacto: </Typography>
                 operación getTotal de RegisteredUser que has detectado en la
                 pregunta anterior. Realiza todos los cambios que consideres necesarios
 en cualquiera de las clases del modelo del enunciado</Typography>
-                <ReactMarkdown>
+                <ReactMarkdown plugins={[gfm]}>
                     {solution.data}
                 </ReactMarkdown>
             </Container>

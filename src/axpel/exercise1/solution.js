@@ -1,6 +1,6 @@
 export const solution = {
     data: `
-    ## Ejercio 1
+    ## Ejercicio 1
 
 PROBLEMA: 
 
