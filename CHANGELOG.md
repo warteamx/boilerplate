@@ -1,5 +1,18 @@
 # Changelog
 
+<a name="0.3.2"></a>
+## 0.3.2 (2020-11-20)
+
+### Added
+
+- ✨ Do exercise 1 [[0d30feb](https://github.com/martinrebo/boilerplate/commit/0d30feb6c3359d73779eb3dd41b0331f6b7a2ba0)]
+
+### Miscellaneous
+
+- 🚧 Add exercise 2 [[ad6f047](https://github.com/martinrebo/boilerplate/commit/ad6f047f9873cfd9a3a6f67854a80846239b9dc9)]
+-  Merge pull request [#7](https://github.com/martinrebo/boilerplate/issues/7) from martinrebo/issue-6-Add_Tests [[1e522b3](https://github.com/martinrebo/boilerplate/commit/1e522b38eec90b0a394fc7884d2eaf076f07b932)]
+
+
 <a name="0.3.1"></a>
 ## 0.3.1 (2020-11-19)
 
