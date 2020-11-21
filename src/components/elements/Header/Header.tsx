@@ -9,6 +9,7 @@ import { makeStyles } from '@material-ui/core';
 export default function Header(): ReactElement {
 
     console.log(process.env.REACT_APP_VERSION)
+
     const useStyles = makeStyles((theme) => ({
         icon: {
             marginRight: theme.spacing(2),

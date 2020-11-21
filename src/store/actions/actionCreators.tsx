@@ -1,6 +1,19 @@
 import * as actionTypes from "./actionTypes";
 
+
+export function addMap(Map: any) {
+  console.log("addMap", Map)
+  const action: any = {
+    type: actionTypes.ADD_MAP,
+    Map
+  };
+
+  return action
+}
+
+
 export function addMessage(Message: IMessage) {
+  
   const action: MessageAction = {
     type: actionTypes.ADD_MESSAGE,
     Message
