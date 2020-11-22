@@ -1,6 +1,6 @@
 {
   "name": "react-starter",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "proxy": "http://localhost:5000/",
   "homepage": "https://boilerplate-mern.ey.r.appspot.com/",
   "private": true,
