@@ -4,8 +4,11 @@ import User from './user';
 import Message from './message';
 
 //mongodb://mongodb:27017/api
+//process.env.PORT
+//process.env.MONGODB
+//mongodb+srv://martinrg33:4TEXNXcuSb6G5TQ@cluster-boilerplate.towaf.mongodb.net/sample_training?retryWrites=true&w=majority
 const connectDb = () => {
-  return mongoose.connect("mongodb+srv://martinrg33:4TEXNXcuSb6G5TQ@cluster-boilerplate.towaf.mongodb.net/sample_training?retryWrites=true&w=majority",
+  return mongoose.connect(process.env.MONGO_DRIVER || "mongodb+srv://martinrg33:4TEXNXcuSb6G5TQ@cluster-boilerplate.towaf.mongodb.net/sample_training?retryWrites=true&w=majority" ,
     {useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex:true,

@@ -1,4 +1,6 @@
-# Ejercio 1
+Deployed: https://boilerplate-mern.ey.r.appspot.com/
+
+# Ejercicio 1
 
 PROBLEMA: 
 
@@ -40,7 +42,7 @@ class RegisteredUser {
 }
 </code></pre>
 
-- Creamos las clase "Service" con la funcion de conseguir el precio específico de cada 'servico' y las fees adicionales. 
+- Creamos las clase "Service" con la funcion de conseguir el precio específico de cada 'servicio' y las fees adicionales. 
 - Ahora ademas de Streaming y Download podríamos añadir nuevos servicios
 
 <pre><code>
@@ -66,7 +68,7 @@ class DownloadingService extends Service {
 </code></pre>
 
 - Creamos una clase MultimediaContent que nos dará las fees adicionales de cada Servicio. 
-- Si el servicio es normal, las fees son 0, y si son Premium 
+- Si el servicio es normal, las fees son 0, y si son Premium se añade el aditional fee. 
 
 <pre><code>
 class MultimediaContent extends RegisteredUser {
@@ -84,3 +86,57 @@ class Premium extends MultimediaContent {
 }
 
 </code></pre>
+
+# Ejercicio 2
+
+NOTA: La app utiliza un código boilerplate de MERN stack con Typescript / MongoDB y otras tecnologías que no he utilizado para esta prueba, pero al tenerlo integrado en el CD/CI de google, lo he utilizado para agilizar mas el "setup" del ejercicio. 
+
+Deployed: https://boilerplate-mern.ey.r.appspot.com/
+
+## USER STORY
+- usuario puede buscar lugares con un Searchbar
+- Por cada lugar se añade un Maker al Mapa a través de redux
+
+## Know issues
+- PROBLEMA: Si el usuario elige un lugar que no aparece en el Autocomplete, la aplicacion se vuelve inestable. 
+- SOLUCIÓN: Comprobar que el lugar elegido se corresponde con el propuesto por Automplete + Añadir Error Boundary + Añadir Mensaje que el lugar solucionado no existe. 
+- Tuve problemas para realizar test en los componentes que utilizan el modulo de 'react-google-maps/api' ya que no estoy familiarizado con el. :( 
+- He dejado al descubierto algunas variables .ENV para que podáis instalar la aplicación en local. La API de Google, MongoDB están al descubierto, y las dejaré así unos dias y después las revocaré. 
+
+## Tech:
+- Create React App 
+- React Google Maps API
+- Redux
+- React Router Dom
+- React Testing Library
+- Node (Express)
+- Google Cloud App Engine
+- Google Cloud Build para CD/CD (Test, build y deploy) 
+
+## Scripts
+Se puede elegir entre utilizar NPM o DOCKER
+
+NPM
+- Para instalar la aplicación: npm install
+- Para empezar: npm run startDEV
+
+DOCKER:
+- docker-compose up -d
+- (con docker hace falta añadir una variable de enviroment .env MONGO_DRIVER=mongodb://mongodb:27017/api)
+
+## OPTIMIZACIÓN 
+- Para analizar el bundle size:
+1) npm run build
+2) npm run analyze
+
+- Actualmente el tamaño es de 508.45KB
+- - react-dom: 114.57KB
+- - material-ui: 106.42KB
+
+
+- He añadido React Profiler al Screen del ejercicio 2 para poder ver a traves los tiempos de carga... Pero no he tenido tiempo de analizarlo. //
+
+- Para tener renders mas rápidos deberíamos hacer pruebas con React Memo, para comprobar si se puede mejorar. No tuve tiempo de analizar esta parte
+
+- Para reducir costes de llamadas a la API de Google (desde el frontend ) podríamos antes de hacer la llamada, podríamos comprobar que si está almacenado en nuestro Redux store, y si está devolver el objeto almacenado y si no hacer la llamada. 
+- Desde el backend podríamos tener un servicio de redis y cache... pero creo que eso ya está fuera de contexto para este ejercicio.  

@@ -20,3 +20,8 @@ export default function Footer({ title, subtitle }: Props): ReactElement {
 
   )
 }
+
+Footer.defaultProps = {
+  title: "MERN APP",
+  subtittle: "Starter Kit for MERN APP "
+}
