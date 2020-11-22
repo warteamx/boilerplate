@@ -4,12 +4,6 @@ steps:
   args: ['install']
 - name: node
   entrypoint: npm
-  args: ["run", "create-env"]
-  env:
-    - "REACT_APP_VERSION=${npm_package_version}"
-    - "REACT_APP_GOOGLE_API=AIzaSyBxwQlDE8omqzejYDuo_ZmycEh8QQjM5GY"
-- name: node
-  entrypoint: npm
   args: ['test']
   env:
     - "CI=true"
@@ -17,6 +11,9 @@ steps:
 - name: node
   entrypoint: npm
   args: ['run', 'build']
+  env: 
+  - "REACT_APP_VERSION=${npm_package_version}"
+
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy', 'PROD/app.yaml']
   timeout: '1600s'
