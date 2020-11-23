@@ -2,8 +2,7 @@ import React, { ReactElement, useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import { Autocomplete} from '@react-google-maps/api';
-
-import { useSelector, shallowEqual, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Dispatch } from "redux";
 import { addMap } from '../../store/actions/actionCreators'
 
@@ -20,40 +19,43 @@ const useStyles = makeStyles((theme) => ({
 export default function Searchbar(): ReactElement {
     const classes = useStyles();
     const dispatch: Dispatch<any> = useDispatch();
-    
+
+    const [input, setInput] = React.useState();
+    const handleChange = (event: any) => {
+      setInput(event.target.value);
+    };
 
     const [autoComplete, setAutocomplete] = useState<any>(null)
 
     const handleOnLoad = (autocomplete :any) => {
-        console.log('autocomplete', autocomplete)
         setAutocomplete(autocomplete)
     }
 
     const handleOnPlaceChanged = () : any => {
         if (autoComplete !== null) {
-
             let newPlace = autoComplete.getPlace()
             dispatch(addMap(newPlace))
-            console.log("place dispatched", newPlace)
         } else {
             console.log('Autocomplete is not loaded yet!')
         }
     }
-    const reduxTest = useSelector((state: any) => state.maps, shallowEqual)
-
-    console.log(reduxTest)
-
+    
     return (
-        <div className={classes.root}>
-
+        <div className={classes.root} data-testid="test">
             <Autocomplete onLoad={handleOnLoad} 
             onPlaceChanged={handleOnPlaceChanged}
             >
-                <div className={classes.root}>
-                <TextField placeholder="Search your places"/>
+                <div className={classes.root} data-testid="test2">
+                <TextField
+                placeholder="Search your places"
+                value={input}
+                onChange={handleChange}
+                inputProps={{
+                    "data-testid": "search-input",
+                }}
+                />
                 </div>
             </Autocomplete>
-
         </div>
     )
 }

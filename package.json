@@ -1,6 +1,6 @@
 {
   "name": "react-starter",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "proxy": "http://localhost:5000/",
   "homepage": "https://boilerplate-mern.ey.r.appspot.com/",
   "private": true,
@@ -21,7 +21,8 @@
     "deploy": "gcloud app deploy PROD/app.yaml",
     "build": "react-scripts build && mkdir PROD && mv build PROD/build && tsc -p server/ && cp package.json PROD/package.json && cp app.yaml PROD/app.yaml ",
     "test": "react-scripts test ",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "analyze": "source-map-explorer 'PROD/build/static/js/*.js'"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -41,11 +42,13 @@
   "devDependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
+    "@react-google-maps/api": "^1.13.0",
     "@reduxjs/toolkit": "^1.4.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "@types/express": "^4.17.8",
+    "@types/googlemaps": "^3.40.3",
     "@types/jest": "^24.0.0",
     "@types/mongoose": "^5.7.36",
     "@types/node": "^12.0.0",
@@ -53,10 +56,8 @@
     "@types/react-dom": "^16.9.0",
     "@types/react-redux": "^7.1.9",
     "@types/react-router-dom": "^5.1.6",
-    "@react-google-maps/api": "^1.13.0",
-    "redux-devtools": "^3.7.0",
     "classnames": "^2.2.6",
-    "remark-gfm": "^1.0.0",
+    "cypress": "^5.6.0",
     "npm-run-all": "^4.1.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -65,7 +66,10 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-transition-group": "^4.4.1",
+    "redux-devtools": "^3.7.0",
     "redux-thunk": "^2.3.0",
+    "remark-gfm": "^1.0.0",
+    "source-map-explorer": "^2.5.0",
     "ts-node-dev": "^1.0.0-pre.64",
     "typescript": "~3.8.0"
   }

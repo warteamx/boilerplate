@@ -11,9 +11,9 @@ steps:
 - name: node
   entrypoint: npm
   args: ['run', 'build']
-  env:
-    - "REACT_APP_VERSION=$npm_package_version"
-    - "REACT_APP_GOOGLE_API=AIzaSyBxwQlDE8omqzejYDuo_ZmycEh8QQjM5GY"
+  env: 
+  - "REACT_APP_VERSION=0.3.3"
+
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy', 'PROD/app.yaml']
   timeout: '1600s'

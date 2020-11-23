@@ -1,5 +1,18 @@
 # Changelog
 
+<a name="0.3.3"></a>
+## 0.3.3 (2020-11-22)
+
+### Changed
+
+- 🔧 v0.3.2 [[3fb7330](https://github.com/martinrebo/boilerplate/commit/3fb73301570fe436da2ba74aae2dfe129a76ba9b)]
+
+### Miscellaneous
+
+- ❇️ Axpel Exercise2 [[131e8bb](https://github.com/martinrebo/boilerplate/commit/131e8bbd5be33f152e0e382f9fe73ecbc4730ee9)]
+-  Merge pull request [#9](https://github.com/martinrebo/boilerplate/issues/9) from martinrebo/issue-8-Axpe [[a487a6c](https://github.com/martinrebo/boilerplate/commit/a487a6c951174af4c85c27eb30d8ed643772b97d)]
+
+
 <a name="0.3.2"></a>
 ## 0.3.2 (2020-11-20)
 
