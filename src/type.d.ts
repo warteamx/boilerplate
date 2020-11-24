@@ -35,3 +35,5 @@ interface IMessage {
   };
   
   type DispatchTESTType = (args: TestAction) => TestAction;
+
+  declare module "*.md"
