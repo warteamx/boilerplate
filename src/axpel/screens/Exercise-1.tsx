@@ -1,6 +1,5 @@
 import React, { ReactElement, useEffect, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
-import gfm from 'remark-gfm'
 
 import Footer from '../../components/elements/Footer/Footer'
 import Header from '../../components/elements/Header/Header'
