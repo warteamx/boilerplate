@@ -10,7 +10,6 @@ import * as markdown from '../exercise1/Readme.md'
 import CodeBlock from '../exercise1/CodeBlock'
 
 
-
 export default function Exercise1(): ReactElement {
 
     const [mdText, setMdText] = useState<any>("")
