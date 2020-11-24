@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="next"></a>
+## next
+
+### Fixed
+
+- 🐛 Fix test bugs [[0cfbdcd](https://github.com/martinrebo/boilerplate/commit/0cfbdcd70742fdffbd948f7c3e64fe00c8a8b6e7)]
+
+
 <a name="0.3.4"></a>
 ## 0.3.4 (2020-11-24)
 
