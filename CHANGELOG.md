@@ -1,5 +1,28 @@
 # Changelog
 
+<a name="0.3.4"></a>
+## 0.3.4 (2020-11-24)
+
+### Added
+
+- ✅ Add test for Header [[fbbe8a7](https://github.com/martinrebo/boilerplate/commit/fbbe8a7a71bcaed894ddf89c8330ddbe8f27f4cd)]
+
+### Changed
+
+- 🎨 Improve UI/UX Axpel [[49a692f](https://github.com/martinrebo/boilerplate/commit/49a692fa2f199e4323b098d612224f8a78b9e89d)]
+
+### Fixed
+
+- 🐛 Fix Axpel not defined Location [[91f65fb](https://github.com/martinrebo/boilerplate/commit/91f65fba230707387730a3f97e372ffc303e0985)]
+- 🐛 Fix version tag [[fa7a94b](https://github.com/martinrebo/boilerplate/commit/fa7a94b5065456c637e1181aa5853590112870be)]
+- 🐛 fix enviromental variable [[32fa7e9](https://github.com/martinrebo/boilerplate/commit/32fa7e976c1239c7db6f5d02ac9625491344d749)]
+
+### Miscellaneous
+
+- 📝 Add best practices to docs [[2b89215](https://github.com/martinrebo/boilerplate/commit/2b89215c25161b9cc19bef673a0ebee45d182520)]
+-  Merge pull request [#11](https://github.com/martinrebo/boilerplate/issues/11) from martinrebo/axpe [[bf1f46e](https://github.com/martinrebo/boilerplate/commit/bf1f46eb6af54d6ffccc0a1bba4398e1d9462025)]
+
+
 <a name="0.3.3"></a>
 ## 0.3.3 (2020-11-22)
 
