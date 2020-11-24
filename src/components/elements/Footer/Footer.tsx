@@ -1,15 +1,24 @@
-import { Typography } from '@material-ui/core'
+
 import React, { ReactElement } from 'react'
+
+import { makeStyles, Typography  } from '@material-ui/core';
 
 interface Props {
   title: string,
   subtitle: string
 }
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+      flexGrow: 1,
+      marginTop: theme.spacing(4),
+}}))
+
 export default function Footer({ title, subtitle }: Props): ReactElement {
+  const classes = useStyles();
   return (
 
-    <footer>
+    <footer className={classes.root}>
       <Typography variant="h6" align="center" gutterBottom>
         {title}
       </Typography>

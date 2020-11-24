@@ -1,4 +1,4 @@
-## Ejercio 1
+## Ejercicio 1
 
 PROBLEMA: 
 
@@ -22,7 +22,10 @@ Se inclumple varios princicipos de SOLID
 RESPUESTA 2: 
 
 - Creamos una función mas genérica para conseguir el precio de los Servicios. "getPrice"
-<pre><code>
+
+~~~js 
+
+
 class RegisteredUser {
     constructor(services = []) {
         this.services = services
@@ -38,12 +41,13 @@ class RegisteredUser {
         return total
     }
 }
-</code></pre>
+
+~~~
 
 - Creamos las clase "Service" con la funcion de conseguir el precio específico de cada 'servico' y las fees adicionales. 
 - Ahora ademas de Streaming y Download podríamos añadir nuevos servicios
 
-<pre><code>
+~~~js 
 class Service extends RegisteredUser {
 
      getPrice() {
@@ -63,12 +67,12 @@ class DownloadingService extends Service {
     }
 }
 
-</code></pre>
+~~~
 
 - Creamos una clase MultimediaContent que nos dará las fees adicionales de cada Servicio. 
 - Si el servicio es normal, las fees son 0, y si son Premium 
 
-<pre><code>
+~~~js
 class MultimediaContent extends RegisteredUser {
 
     getFees() {
@@ -83,5 +87,5 @@ class Premium extends MultimediaContent {
     }
 }
 
-</code></pre>
+~~~
 

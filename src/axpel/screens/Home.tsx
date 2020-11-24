@@ -10,11 +10,13 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid } from '@material-ui/core';
+import { Grid, Container } from '@material-ui/core';
 
 const useStyles = makeStyles({
     root: {
         flexGrow: 1,
+        padding: "10px",
+        height: "100%"
     },
     bullet: {
         display: 'inline-block',
@@ -23,6 +25,7 @@ const useStyles = makeStyles({
     },
     title: {
         fontSize: 18,
+        padding: 5
     },
     pos: {
         marginBottom: 12,
@@ -33,9 +36,10 @@ export default function Home(): ReactElement {
     const classes = useStyles()
     return (
         <>
-            <Header />
-            <Grid container spacing={5} >
-                <Grid item xs={12} md={6}>
+            <Header title="Axpel Tech Test" />
+            <Container maxWidth="lg"  >
+                <Grid container spacing={3} alignItems="stretch">
+                <Grid item xs={12}  md={6}>
                     <Card className={classes.root}>
                         <CardContent>
                             <Typography  variant="h2" className={classes.title}> Ejercicio 1 </Typography>
@@ -53,7 +57,7 @@ export default function Home(): ReactElement {
                 <Grid item xs={12} md={6}>
                     <Card className={classes.root}>
                         <CardContent>
-                            <Typography  variant="h2" className={classes.title}> Ejercico 2  </Typography>
+                            <Typography  variant="h2" className={classes.title}> Ejercicio 2  </Typography>
                             <Typography> Los componentes tienen que estar desacoplados, aunque utilicen la misma api de Google. </Typography>
                             <Typography> Por cada búsqueda que el usuario realice, se tiene que guardar un “Marker” con la información de éste en un estado gestionado por Redux.</Typography>
                             <Typography>Los estilos en general, los dejamos a tu elección.</Typography>
@@ -69,8 +73,8 @@ export default function Home(): ReactElement {
                         </CardActions>
                     </Card>
                 </Grid>
-
-            </Grid>
+                </Grid>
+            </Container>
             <Footer title="Axpel Test" subtitle="Technical Test for frontend position with React" />
         </>
     )

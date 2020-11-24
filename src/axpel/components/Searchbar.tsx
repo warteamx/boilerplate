@@ -9,7 +9,7 @@ import { addMap } from '../../store/actions/actionCreators'
 const useStyles = makeStyles((theme) => ({
     root: {
         '& .MuiTextField-root': {
-            margin: theme.spacing(5),
+            margin: theme.spacing(2),
             width: '50%',
         },
     },

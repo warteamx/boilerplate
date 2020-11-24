@@ -1,19 +1,30 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, useEffect, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import gfm from 'remark-gfm'
 
 import Footer from '../../components/elements/Footer/Footer'
 import Header from '../../components/elements/Header/Header'
-import { solution } from '../exercise1/solution.js'
 
 import { Container, Typography } from '@material-ui/core'
+import * as markdown from '../exercise1/Readme.md'
+
+import CodeBlock from '../exercise1/CodeBlock'
+
 
 
 export default function Exercise1(): ReactElement {
+
+    const [mdText, setMdText] = useState<any>("")
+
+    useEffect(() => {
+        fetch(markdown).then((res) => res.text()).then((text) => {
+            setMdText(text)
+        })
+    }, [])
     return (
         <>
             <Header />
-            <Container>
+            <Container maxWidth="md">
                 <Typography> Revisamos el pseudocódigo de la operación getTotal de la clase RegisteredUser y
                 nos preocupa que el su diseño sea un poco frágil ya que no vemos claro si
 contempla los posibles escenarios futuros y su impacto: </Typography>
@@ -23,9 +34,7 @@ contempla los posibles escenarios futuros y su impacto: </Typography>
                 operación getTotal de RegisteredUser que has detectado en la
                 pregunta anterior. Realiza todos los cambios que consideres necesarios
 en cualquiera de las clases del modelo del enunciado</Typography>
-                <ReactMarkdown plugins={[gfm]}>
-                    {solution.data}
-                </ReactMarkdown>
+                <ReactMarkdown children={mdText} renderers={{ code: CodeBlock }} />
             </Container>
 
             <Footer title="Axpel Test " subtitle="Exercise 1" />
