@@ -1,35 +1,37 @@
 import bodyParser from 'body-parser';
 import express from 'express';
 import cors from 'cors';
-import { ApolloServer, gql } from 'apollo-server-express';
-
+import { ApolloServer } from 'apollo-server-express';
+import { typeDefs } from './graphql/schema'
+import { resolvers } from './graphql/resolvers'
 
 import { connectDb } from './models';
-
+import Realm from "realm"
 import { postMessages, putMessage } from './routes/messages';
 import { getUser } from './routes/users';
 
 import { test } from './routes/test';
 
-// A schema is a collection of type definitions (hence "typeDefs")
-// that together define the "shape" of queries that are executed against
-// your data.
-const typeDefs = gql`
-  # Comments in GraphQL strings (such as this one) start with the hash (#) symbol.
 
-  # This "Book" type defines the queryable fields for every book in our data source.
-  type Book {
-    title: String
-    author: String
-  }
+const RealmApp = new Realm.App({ id: "application-0-xzvns" });
 
-  # The "Query" type is special: it lists all of the available queries that
-  # clients can execute, along with the return type for each. In this
-  # case, the "books" query returns an array of zero or more Books (defined above).
-  type Query {
-    books: [Book]
-  }
-`;
+async function handleLogin() {
+  // Create a Credentials object to identify the user.
+  // Anonymous credentials don't have any identifying information, but other
+  // authentication providers accept additional data, like a user's email and
+  // password.
+
+  const credentials: Realm.Credentials = Realm.Credentials.anonymous();
+
+  // You can log in with any set of credentials using `app.logIn()`
+
+  const user: Realm.User = await RealmApp.logIn(credentials);
+
+  console.log(`Logged in with the user id: ${user.id}`);
+};
+handleLogin().catch(err => {
+  console.error("Failed to log in:", err)
+});
 
 const books = [
   {
@@ -44,11 +46,11 @@ const books = [
 
 // Resolvers define the technique for fetching the types defined in the
 // schema. This resolver retrieves books from the "books" array above.
-const resolvers = {
-  Query: {
-    books: () => books,
-  },
-};
+// const resolvers = {
+//   Query: {
+//     books: () => books,
+//   },
+// };
 
 const server = new ApolloServer({
   typeDefs,
@@ -65,6 +67,8 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, 'build/')));
 
 server.applyMiddleware({ app });
+
+
 
 // user
 app.get('/api/test', test);
@@ -83,16 +87,16 @@ app.put('/api/messages/:id', putMessage);
 /**
  * PROD: 
  * in production mode server and index are on the same folder ( In developer mode there is no index file)
- *   */ 
+ *   */
 app.get('*', function (req, res) {
-    res.sendFile(path.join(__dirname + 'build/index.html'));
-  });
+  res.sendFile(path.join(__dirname + 'build/index.html'));
+});
 
 // tslint:disable-next-line:no-console
 connectDb().then(() => console.log('DB Connected!'))
-.catch(err => {
-console.log(`DB Connection Error:', ${err}`);
-});
+  .catch(err => {
+    console.log(`DB Connection Error:', ${err}`);
+  });
 
 
 app.listen(port, () => console.log(`Listening on port ${port}
