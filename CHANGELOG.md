@@ -1,7 +1,20 @@
 # Changelog
 
-<a name="next"></a>
-## next
+<a name="0.3.6"></a>
+## 0.3.6 (2021-01-12)
+
+### Miscellaneous
+
+- 🚧 Work in Progress [[c3bf46f](https://github.com/martinrebo/boilerplate/commit/c3bf46f4d6ade3c8a40645c3414bbd930254ed6b)]
+-  Merge pull request [#13](https://github.com/martinrebo/boilerplate/issues/13) from martinrebo/issue-12-Refactor_Code [[7303c2a](https://github.com/martinrebo/boilerplate/commit/7303c2acac3b6fcc7df81c448be88277f3e0a80e)]
+
+
+<a name="0.3.5"></a>
+## 0.3.5 (2020-11-24)
+
+### Changed
+
+- 🔧 v0.3.5 [[a335cad](https://github.com/martinrebo/boilerplate/commit/a335cadf359f2a80fe281782f3db6e184d6d8f42)]
 
 ### Fixed
 

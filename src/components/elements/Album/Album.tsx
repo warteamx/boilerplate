@@ -41,7 +41,7 @@ const cards = [{
   description: "Sample data from MongoDB containing Listings and Reviews scrapped from Airbnb",
   image: "airbnb",
   path: "airbnb",
-  disabled: true
+  disabled: false
 },
 {
   id: 2,
