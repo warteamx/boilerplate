@@ -6,6 +6,7 @@ import useFetch from "react-fetch-hook";
 import { makeStyles } from '@material-ui/core';
 import GnomesList from '../elements/GnomeCard/GnomeCard';
 import Pagination from '@material-ui/lab/Pagination';
+import Filter from '../elements/Filter/Filter';
 
 interface GnomeData {
   age: number,
@@ -43,24 +44,43 @@ const useStyles = makeStyles({
 export default function Gnomes(): ReactElement {
   const classes = useStyles();
 
+  // Pagination State 
   const [offset, setOffset] = useState(0);
   const [perPage] = useState(12);
-
   const handlePageClick = (event: object, page: number) => {
     setOffset(page + 1)
   };
 
+  // Fetching from url 
   const { isLoading, data, error }: any = useFetch("https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json");
 
+  // data to display
   let slice = data?.Brastlewark?.slice(offset, offset + perPage)
 
+  // Filter data State
+  const [gnomeSearch, setGnomeSearch] = useState("")
+
+  console.log("gnomeSearch", gnomeSearch)
+
+  function getFilteredData(items : any) {
+
+    
+    let filtered = items?.filter( (item : GnomeData) => item.name.toLowerCase().includes(gnomeSearch.toLowerCase()))
+
+    console.log("getFiltered", filtered)
+    return filtered
+  }
 
   return (
 
     <div className={classes.root}>
 
+      <Filter filterBy={ name => setGnomeSearch(name)  }/>
+
+      {error ? "error" : null}
+
       {isLoading ? "loading" :
-        <GnomesList data={slice} />}
+        <GnomesList data={getFilteredData(slice)} />}
       <Pagination
         count={Math.ceil(data?.Brastlewark?.length / perPage)}
         onChange={handlePageClick}

@@ -10,7 +10,7 @@ import AxpelHome from '../axpel/screens/Home'
 import AxpelExercise1 from '../axpel/screens/Exercise-1'
 import AxpelExercise2 from '../axpel/screens/Exercise-2'
 import Airbnb from '../modules/airbnb/screens/Airbnb';
-import Gnomes from '../modules/altran/screens/Gnomes';
+import Gnomes from '../modules/altran/screens/GnomesScreen';
 
 
 export default function Routes(): ReactElement {

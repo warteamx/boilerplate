@@ -28,7 +28,7 @@ interface GnomeData {
 }
 
 interface Props {
-  data: Array<GnomeData>
+  data: any
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -48,11 +48,11 @@ export default function GnomesList({ data }: Props): ReactElement {
 
   const classes = useStyles();
 
-  console.log(data)
+  // console.log(data)
 
   return (
     <Grid container spacing={3}>
-      {data.map((element) => (
+      {data?.map((element : any) => (
         <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={element.id} >
           <Card className={classes.root}>
             <CardHeader
