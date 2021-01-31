@@ -65,6 +65,13 @@ const cards = [{
   image: "axpel",
   path: "axpel",
   disabled: false
+},{
+  id: 5,
+  heading: "Altran",
+  description: "Technical test for Altran",
+  image: "altran",
+  path: "altran",
+  disabled: false
 }]
 
 export default function Album() {
