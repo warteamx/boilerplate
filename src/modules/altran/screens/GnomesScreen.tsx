@@ -3,7 +3,7 @@ import React, { ReactElement, useState } from 'react'
 
 import useFetch from "react-fetch-hook";
 
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, Container } from '@material-ui/core';
 import GnomesList from '../elements/GnomeCard/GnomeCard';
 import Pagination from '@material-ui/lab/Pagination';
 import Filter from '../elements/Filter/Filter';
@@ -46,7 +46,7 @@ export default function Gnomes(): ReactElement {
 
   // Pagination State 
   const [offset, setOffset] = useState(0);
-  const [perPage] = useState(12);
+  const [perPage] = useState(4);
   const handlePageClick = (event: object, page: number) => {
     setOffset(page + 1)
   };
@@ -58,35 +58,46 @@ export default function Gnomes(): ReactElement {
   let slice = data?.Brastlewark?.slice(offset, offset + perPage)
 
   // Filter data State
-  const [gnomeSearch, setGnomeSearch] = useState("")
+  const [gnomeSearch, setGnomeSearch] = useState({ name: "", age: [50, 350] })
 
-  console.log("gnomeSearch", gnomeSearch)
+  function getFilteredData(items: any) {
 
-  function getFilteredData(items : any) {
 
-    
-    let filtered = items?.filter( (item : GnomeData) => item.name.toLowerCase().includes(gnomeSearch.toLowerCase()))
+    let filtered = items?.filter((item: any) =>
+      // Filter by name
+      (item.name.toLowerCase().includes(gnomeSearch.name.toLowerCase()))
+      //Filter by age
+      &&
+      (item.age >= gnomeSearch.age[0])
+      &&
+      (item.age <= gnomeSearch.age[1])
+      // TODO: Filter by height, weight, hair color, 
 
-    console.log("getFiltered", filtered)
+    )
+
+    console.log("getFiltered", filtered, items)
     return filtered
   }
 
   return (
 
     <div className={classes.root}>
+      <Container maxWidth="xl">
 
-      <Filter filterBy={ name => setGnomeSearch(name)  }/>
+        <Filter filterBy={(name, age) => setGnomeSearch({ name, age })} />
 
-      {error ? "error" : null}
+        {error ? "error" : null}
 
-      {isLoading ? "loading" :
-        <GnomesList data={getFilteredData(slice)} />}
-      <Pagination
-        count={Math.ceil(data?.Brastlewark?.length / perPage)}
-        onChange={handlePageClick}
-        color="primary" />
-
+        {isLoading ? "loading" :
+          <GnomesList data={getFilteredData(slice)} />}
+        <Pagination
+          count={Math.ceil(data?.Brastlewark?.length / perPage)}
+          onChange={handlePageClick}
+          color="primary" />
+      </Container>
     </div>
+
+
 
   )
 }

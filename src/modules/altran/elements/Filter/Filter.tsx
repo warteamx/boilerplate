@@ -1,27 +1,60 @@
-import React, { ReactElement, useState } from 'react'
+import React, { ReactElement, useState, useEffect } from 'react'
 
 
 import TextField from '@material-ui/core/TextField';
+import { Grid, Slider, Typography, Paper } from '@material-ui/core';
 
 
 interface Props {
-  filterBy: (name: string )=>void
+  filterBy: (name: string, age: any) => void
+}
+
+// Aria Value Text 
+function valuetext(value: number) {
+  return `${value} years old`;
 }
 
 export default function Filter({ filterBy }: Props): ReactElement {
 
   const [name, setName] = useState("")
-  const handleChange = (event:  React.ChangeEvent<HTMLInputElement> ) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
-    filterBy(event.target.value);
   };
 
-  return (
-    <div>
-      <TextField id="filter-by-name" 
-      value={name} onChange={handleChange}
-      placeholder="Search by Gnome Name" />
+  const [age, setAge] = useState([50, 350]);
 
-    </div>
+  const handleAgeChange = (event: any, newValue: any) => {
+    setAge(newValue);
+  };
+
+  useEffect(() => {
+    filterBy(name, age);
+  }, [name, age])
+
+  return (
+    <Paper elevation={24} style={{ padding: 30 }} >
+      <Grid container zeroMinWidth >
+        <Grid container item xs={6}  spacing={5}>
+          <TextField id="filter-by-name"
+            value={name} onChange={handleChange}
+            placeholder="Search by Gnome Name" />
+        </Grid>
+        <Grid container item xs={6}  spacing={5}>
+          <Typography id="discrete-slider-small-steps" gutterBottom>
+            Choose Age
+        </Typography>
+          <Slider
+            value={age}
+            onChange={handleAgeChange}
+            valueLabelDisplay="auto"
+            aria-labelledby="range-slider"
+            getAriaValueText={valuetext}
+            max={500}
+            min={0}
+          />
+        </Grid>
+
+      </Grid>
+    </Paper>
   )
 }

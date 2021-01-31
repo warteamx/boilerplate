@@ -51,8 +51,14 @@ export default function GnomesList({ data }: Props): ReactElement {
   // console.log(data)
 
   return (
+    <>
+
+<Typography variant="h3">
+  Gnomes in Brastlewark
+</Typography>
     <Grid container spacing={3}>
-      {data?.map((element : any) => (
+
+      {data?.map((element: any) => (
         <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={element.id} >
           <Card className={classes.root}>
             <CardHeader
@@ -94,6 +100,6 @@ export default function GnomesList({ data }: Props): ReactElement {
         </Grid>
       ))}
     </Grid>
-
+</>
   )
 }
