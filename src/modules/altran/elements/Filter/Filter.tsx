@@ -2,7 +2,7 @@ import React, { ReactElement, useState, useEffect } from 'react'
 
 
 import TextField from '@material-ui/core/TextField';
-import { Grid, Slider, Typography, Paper } from '@material-ui/core';
+import { Grid, Slider, Typography, Paper, Box } from '@material-ui/core';
 
 
 interface Props {
@@ -32,26 +32,26 @@ export default function Filter({ filterBy }: Props): ReactElement {
   }, [name, age])
 
   return (
-    <Paper elevation={24} style={{ padding: 30 }} >
-      <Grid container zeroMinWidth >
-        <Grid container item xs={6}  spacing={5}>
-          <TextField id="filter-by-name"
-            value={name} onChange={handleChange}
-            placeholder="Search by Gnome Name" />
+    <Paper elevation={0} style={{ padding: 30 }} >
+      <Grid container spacing={10} >
+        <Grid container item xs={6} spacing={0}>
+            <TextField id="filter-by-name" fullWidth
+              value={name} onChange={handleChange}
+              placeholder="Search by Gnome Name" />
         </Grid>
-        <Grid container item xs={6}  spacing={5}>
+        <Grid container item xs={6} spacing={5} >
           <Typography id="discrete-slider-small-steps" gutterBottom>
-            Choose Age
+            Choose Age (50-350)
         </Typography>
-          <Slider
-            value={age}
-            onChange={handleAgeChange}
-            valueLabelDisplay="auto"
-            aria-labelledby="range-slider"
-            getAriaValueText={valuetext}
-            max={500}
-            min={0}
-          />
+            <Slider
+              value={age}
+              onChange={handleAgeChange}
+              valueLabelDisplay="auto"
+              aria-labelledby="range-slider"
+              getAriaValueText={valuetext}
+              max={350}
+              min={50}
+            />
         </Grid>
 
       </Grid>

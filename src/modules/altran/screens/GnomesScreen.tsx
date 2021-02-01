@@ -3,10 +3,11 @@ import React, { ReactElement, useState } from 'react'
 
 import useFetch from "react-fetch-hook";
 
-import { makeStyles, Container } from '@material-ui/core';
-import GnomesList from '../elements/GnomeCard/GnomeCard';
+import { makeStyles, Container, Box, Grid } from '@material-ui/core';
+import GnomesList from '../elements/GnomeList/GnomeList';
 import Pagination from '@material-ui/lab/Pagination';
 import Filter from '../elements/Filter/Filter';
+
 
 interface GnomeData {
   age: number,
@@ -74,8 +75,6 @@ export default function Gnomes(): ReactElement {
       // TODO: Filter by height, weight, hair color, 
 
     )
-
-    console.log("getFiltered", filtered, items)
     return filtered
   }
 
@@ -89,11 +88,17 @@ export default function Gnomes(): ReactElement {
         {error ? "error" : null}
 
         {isLoading ? "loading" :
-          <GnomesList data={getFilteredData(slice)} />}
-        <Pagination
-          count={Math.ceil(data?.Brastlewark?.length / perPage)}
-          onChange={handlePageClick}
-          color="primary" />
+          <GnomesList loading={isLoading} data={getFilteredData(slice)} />}
+  <Box p={5} >
+  <Pagination 
+            count={Math.ceil(data?.Brastlewark?.length / perPage)}
+            onChange={handlePageClick}
+            color="primary" 
+            size="large"
+            style={{display: "flex", justifyContent:"center"}} />
+  </Box>
+
+
       </Container>
     </div>
 

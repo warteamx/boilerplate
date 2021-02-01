@@ -10,7 +10,8 @@ import AxpelHome from '../axpel/screens/Home'
 import AxpelExercise1 from '../axpel/screens/Exercise-1'
 import AxpelExercise2 from '../axpel/screens/Exercise-2'
 import Airbnb from '../modules/airbnb/screens/Airbnb';
-import Gnomes from '../modules/altran/screens/GnomesScreen';
+import GnomesScreen from '../modules/altran/screens/GnomesScreen';
+import GnomeCard from '../modules/altran/elements/GnomeCard/GnomeCard';
 
 
 export default function Routes(): ReactElement {
@@ -23,7 +24,8 @@ export default function Routes(): ReactElement {
         <Route path="/axpel/exercise-2" component={AxpelExercise2}/>
         <Route path="/axpel" component={AxpelHome}/>
         <Route path="/airbnb" component={Airbnb} />
-        <Route path="/altran" component={Gnomes} />
+        <Route path="/altran/user/:id" component={GnomeCard} />
+        <Route path="/altran" component={GnomesScreen} />
         <Route path="/" component={Home}/>
     </Switch>
 </Router>

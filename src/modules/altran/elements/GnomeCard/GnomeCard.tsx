@@ -1,7 +1,10 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, useEffect, useState } from 'react'
 
+import useFetch from "react-fetch-hook";
 
-import { makeStyles, Typography, Grid } from '@material-ui/core';
+import { useParams, useHistory } from "react-router-dom";
+
+import { makeStyles, Typography, Grid, Container, Button } from '@material-ui/core';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
@@ -14,6 +17,9 @@ import { red } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import MoreVertIcon from '@material-ui/icons/MoreVert'
+import Skeleton from '@material-ui/lab/Skeleton';
+import VisibilityIcon from '@material-ui/icons/Visibility';
+
 
 interface GnomeData {
   age: number,
@@ -27,13 +33,9 @@ interface GnomeData {
   weight: number
 }
 
-interface Props {
-  data: any
-}
-
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    maxWidth: 600,
   },
   media: {
     height: 0,
@@ -44,62 +46,77 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function GnomesList({ data }: Props): ReactElement {
-
+export default function GnomeCard(): ReactElement {
   const classes = useStyles();
+  let params = useParams<any>();
+  let history = useHistory();
+  // Fetching from url to simulate real API call
+  const { isLoading, data, error }: any = useFetch("https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json");
 
-  // console.log(data)
+  const [gnome, setGnome] = useState<GnomeData | any>()
+
+  useEffect(() => {
+    // Filter Data to simulate real API response, with just 1 element
+    setGnome(data?.Brastlewark?.filter((item: any) => item.id == params?.id)[0])
+  }, [data])
+
+ const handleClick = (e : any) => {
+  history.push(`/altran/`);
+}
 
   return (
     <>
+      <Container maxWidth="md">
 
-<Typography variant="h3">
-  Gnomes in Brastlewark
-</Typography>
-    <Grid container spacing={3}>
+<Button onClick={handleClick}> Go back </Button>
 
-      {data?.map((element: any) => (
-        <Grid item xs={12} sm={6} md={4} lg={3} xl={2} key={element.id} >
-          <Card className={classes.root}>
-            <CardHeader
-              avatar={
-                <Avatar aria-label="recipe" className={classes.avatar}>
-                  R
-          </Avatar>
-              }
-              action={
-                <IconButton aria-label="settings">
-                  <MoreVertIcon />
+        {isLoading ? "loading" :
+          <Grid item xs={12} >
+            <Card className={classes.root}>
+              <CardHeader
+                action={
+                  <IconButton aria-label="settings">
+                    <MoreVertIcon />
+                  </IconButton>
+                }
+                title={gnome?.name}
+                subheader={`${gnome?.age} years old`}
+              />
+              <CardMedia
+                className={classes.media}
+                image={gnome?.thumbnail}
+                title={gnome?.name}
+              />
+
+              <CardContent>
+                <Typography variant="body2" color="textPrimary" component="p">
+                  Height: {Math.round(gnome?.height)} cm,
+                </Typography>
+                <Typography variant="body2" color="textPrimary" component="p">
+                  Weight: {Math.round(gnome?.weight)} kg
+                </Typography>
+                <Typography variant="body2" color="textPrimary" component="p">
+                  Hair color: {gnome?.hair_color}
+                </Typography>
+                <Typography variant="body2" color="textPrimary" component="p">
+                  Friends: {gnome?.friends.toString()}
+                </Typography>
+                <Typography variant="body2" color="textPrimary" component="p">
+                  Professions: {gnome?.professions.toString()}
+                </Typography>
+              </CardContent>
+              <CardActions disableSpacing>
+                <IconButton aria-label="share" color="primary">
+                  <FavoriteIcon />
                 </IconButton>
-              }
-              title={element.name}
-              subheader={`${element.age} years old`}
-            />
-            <CardMedia
-              className={classes.media}
-              image={element.thumbnail}
-              title={element.name}
-            />
-            <CardContent>
-              <Typography variant="body2" color="textSecondary" component="p">
-                Height: {Math.round(element.height)} cm, Weight: {Math.round(element.weight)} kg, Hair color: {element.hair_color}
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                Friends : {element.friends.toString()}
-              </Typography>
-            </CardContent>
-            <CardActions disableSpacing>
-              <IconButton aria-label="add to favorites">
-                <FavoriteIcon />
-              </IconButton>
-              <IconButton aria-label="share">
-                <ShareIcon />
-              </IconButton>
-            </CardActions>
-          </Card>
-        </Grid>
-      ))}
-    </Grid>
-</>
+              </CardActions>
+            </Card>
+          </Grid>
+
+        }
+
+
+      </Container>
+    </>
   )
 }
