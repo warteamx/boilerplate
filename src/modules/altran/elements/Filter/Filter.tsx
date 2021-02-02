@@ -29,6 +29,7 @@ export default function Filter({ filterBy }: Props): ReactElement {
 
   useEffect(() => {
     filterBy(name, age);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [name, age])
 
   return (

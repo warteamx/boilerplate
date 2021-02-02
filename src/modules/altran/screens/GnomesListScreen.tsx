@@ -3,9 +3,8 @@ import React, { ReactElement, useState } from 'react'
 
 import useFetch from "react-fetch-hook";
 
-import { useHistory } from "react-router-dom";
 
-import { makeStyles, Container, Box, Button } from '@material-ui/core';
+import { makeStyles, Container, Box } from '@material-ui/core';
 import GnomesList from '../elements/GnomeList/GnomeList';
 import Pagination from '@material-ui/lab/Pagination';
 import Filter from '../elements/Filter/Filter';
@@ -48,7 +47,6 @@ const useStyles = makeStyles({
 
 export default function Gnomes(): ReactElement {
   const classes = useStyles();
-  let history = useHistory();
 
   // Pagination State 
   const [offset, setOffset] = useState(0);

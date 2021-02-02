@@ -3,10 +3,17 @@
 ### USER STORY
 - User can see the the Gnomes in Brastlewark. 
 - User can filter by name and age
+- I supposed that the legal Age for Gnomes to be on the app is 50 years old. And the lifespan of a gnome is 350 years. 
+
+### if I had MORE TIME
+- Error Boundaries and Suspense for Images
+- Add Skeleton for App + Loading and Error components 
+- Improve UI + More Testing ... 
 
 ### TECH
 - I used Material UI for the visual elements. 
-- I used Typescript
+- Typescript
+- Gitmoji Changelog for semver. 
 - I created this MERN boilerplate code for Docker, hosting the code (Google Cloud) and deploy de app with CD/CI. 
 - Docker or npm (npm recomended for altran challenge) to run the project
 

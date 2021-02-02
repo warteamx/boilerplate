@@ -67,6 +67,8 @@ export default function GnomeCard(): ReactElement {
       <Container maxWidth="md">
         <Button onClick={handleClick}> Go back </Button>
 
+{error ? "error" : null}
+
         {isLoading ? "loading" :
           <Grid item xs={12} >
             <Card className={classes.root}>
