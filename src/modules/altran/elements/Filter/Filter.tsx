@@ -29,7 +29,7 @@ export default function Filter({ filterBy }: Props): ReactElement {
 
   useEffect(() => {
     filterBy(name, age);
-  }, [name, age, filterBy])
+  }, [name, age])
 
   return (
     <Paper elevation={0} style={{ padding: 30 }} >

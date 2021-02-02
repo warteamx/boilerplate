@@ -3,10 +3,14 @@ import React, { ReactElement, useState } from 'react'
 
 import useFetch from "react-fetch-hook";
 
-import { makeStyles, Container, Box} from '@material-ui/core';
+import { useHistory } from "react-router-dom";
+
+import { makeStyles, Container, Box, Button } from '@material-ui/core';
 import GnomesList from '../elements/GnomeList/GnomeList';
 import Pagination from '@material-ui/lab/Pagination';
 import Filter from '../elements/Filter/Filter';
+import Header from '../../../components/elements/Header/Header';
+import Footer from '../../../components/elements/Footer/Footer';
 
 
 interface GnomeData {
@@ -44,6 +48,7 @@ const useStyles = makeStyles({
 
 export default function Gnomes(): ReactElement {
   const classes = useStyles();
+  let history = useHistory();
 
   // Pagination State 
   const [offset, setOffset] = useState(0);
@@ -62,8 +67,6 @@ export default function Gnomes(): ReactElement {
   const [gnomeSearch, setGnomeSearch] = useState({ name: "", age: [50, 350] })
 
   function getFilteredData(items: any) {
-
-
     let filtered = items?.filter((item: any) =>
       // Filter by name
       (item.name.toLowerCase().includes(gnomeSearch.name.toLowerCase()))
@@ -81,25 +84,26 @@ export default function Gnomes(): ReactElement {
   return (
 
     <div className={classes.root}>
+      <Header />
       <Container maxWidth="xl">
-
         <Filter filterBy={(name, age) => setGnomeSearch({ name, age })} />
 
         {error ? "error" : null}
 
         {isLoading ? "loading" :
           <GnomesList loading={isLoading} data={getFilteredData(slice)} />}
-  <Box p={5} >
-  <Pagination 
+        <Box p={5} >
+          <Pagination
             count={Math.ceil(data?.Brastlewark?.length / perPage)}
             onChange={handlePageClick}
-            color="primary" 
+            color="primary"
             size="large"
-            style={{display: "flex", justifyContent:"center"}} />
-  </Box>
+            style={{ display: "flex", justifyContent: "center" }} />
+        </Box>
 
 
       </Container>
+      <Footer subtitle="Altran Challenge"/>
     </div>
 
 

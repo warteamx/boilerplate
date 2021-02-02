@@ -50,7 +50,6 @@ export default function GnomesList({ data, loading }: Props): ReactElement {
 
   // console.log(data)
   const handleClick = (e : any) => {
-    console.log(e.currentTarget.id)
     history.push(`/altran/user/${e.currentTarget.id}`);
   }
 

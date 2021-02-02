@@ -14,6 +14,8 @@ import IconButton from '@material-ui/core/IconButton';
 import { red } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import MoreVertIcon from '@material-ui/icons/MoreVert'
+import Header from '../../../components/elements/Header/Header';
+import Footer from '../../../components/elements/Footer/Footer';
 
 
 interface GnomeData {
@@ -51,8 +53,8 @@ export default function GnomeCard(): ReactElement {
   const [gnome, setGnome] = useState<GnomeData | any>()
 
   useEffect(() => {
-    // Filter Data to simulate real API response, with just 1 element
-    setGnome(data?.Brastlewark?.filter((item: any) => item.id === params?.id)[0])
+    // eslint-disable-next-line eqeqeq
+    setGnome(data?.Brastlewark?.filter((item: any) => item.id == params?.id)[0])
   }, [data, params])
 
   const handleClick = (e: any) => {
@@ -61,11 +63,9 @@ export default function GnomeCard(): ReactElement {
 
   return (
     <>
+      <Header />
       <Container maxWidth="md">
-
         <Button onClick={handleClick}> Go back </Button>
-
-        {error ? "error" : null}
 
         {isLoading ? "loading" :
           <Grid item xs={12} >
@@ -114,6 +114,7 @@ export default function GnomeCard(): ReactElement {
 
 
       </Container>
+      <Footer subtitle="Altran" />
     </>
   )
 }
