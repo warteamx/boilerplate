@@ -37,6 +37,7 @@ export default function Filter({ filterBy }: Props): ReactElement {
         <Grid container item xs={6} spacing={0}>
             <TextField id="filter-by-name" fullWidth
               value={name} onChange={handleChange}
+              label="search-name"
               placeholder="Search by Gnome Name" />
         </Grid>
         <Grid container item xs={6} spacing={5} >
@@ -45,6 +46,7 @@ export default function Filter({ filterBy }: Props): ReactElement {
         </Typography>
             <Slider
               value={age}
+              name="search-age"
               onChange={handleAgeChange}
               valueLabelDisplay="auto"
               aria-labelledby="range-slider"
