@@ -1,5 +1,34 @@
 # Changelog
 
+<a name="0.3.7"></a>
+## 0.3.7 (2021-02-02)
+
+- Create Gnome APP for Altran Tecnical Test
+- Readme File + Challenge Documentation:  src > modules > altran
+
+### Added
+
+- ✅ Add minimum test [[3c45b34](https://github.com/martinrebo/boilerplate/commit/3c45b3423b652059f0d3a688817b78597c0ff8cc)]
+- ✨ Add Gnome Profile Page [[0716dd1](https://github.com/martinrebo/boilerplate/commit/0716dd1b63f6974d907a9bdf63be84f6479cd91d)]
+- ✨ Add filter Gnomes by Age [[6234962](https://github.com/martinrebo/boilerplate/commit/6234962dbf8817ce4b1a6a45d09abb73b62dc41c)]
+- ✨ Add filter Gnomes by Name [[32f651e](https://github.com/martinrebo/boilerplate/commit/32f651e5740fa5aff39170c4b00a1e905f8a432f)]
+- ✨ Add Gnomes List components [[81b7955](https://github.com/martinrebo/boilerplate/commit/81b79555a39cc26b80d7b1f62de91a1f00b57719)]
+
+### Changed
+
+- ♻️ ESlint  + Documentation [[65854ce](https://github.com/martinrebo/boilerplate/commit/65854ceda7fbd1d217f6b0c31c2d9151c0680746)]
+- ♻️ Clean code + ESlint [[fe93919](https://github.com/martinrebo/boilerplate/commit/fe93919978a5b3dfea7fa9c4b406376ebf339484)]
+- ♻️ Refactor code [[4dc08a4](https://github.com/martinrebo/boilerplate/commit/4dc08a4d5f5e250eb20a447569cbff9e61fa4967)]
+
+### Fixed
+
+- 🐛 Delete connection to Realm [[592ca41](https://github.com/martinrebo/boilerplate/commit/592ca41311ec501cdcad1f2a360329ae2c6e43ad)]
+
+### Miscellaneous
+
+-  Merge pull request [#15](https://github.com/martinrebo/boilerplate/issues/15) from martinrebo/issue-14-Airbnb_Module [[d966449](https://github.com/martinrebo/boilerplate/commit/d9664499972c314c46e7111ac01298a76e09c30f)]
+
+
 <a name="0.3.6"></a>
 ## 0.3.6 (2021-01-12)
 

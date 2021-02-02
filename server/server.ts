@@ -6,43 +6,44 @@ import { typeDefs } from './graphql/schema'
 import { resolvers } from './graphql/resolvers'
 
 import { connectDb } from './models';
-import Realm from "realm"
+// import Realm from "realm"
 import { postMessages, putMessage } from './routes/messages';
 import { getUser } from './routes/users';
 
 import { test } from './routes/test';
 
 
-const RealmApp = new Realm.App({ id: "application-0-xzvns" });
+// const RealmApp = new Realm.App({ id: "application-0-xzvns" });
 
-async function handleLogin() {
-  // Create a Credentials object to identify the user.
-  // Anonymous credentials don't have any identifying information, but other
-  // authentication providers accept additional data, like a user's email and
-  // password.
+// async function handleLogin() {
+//   // Create a Credentials object to identify the user.
+//   // Anonymous credentials don't have any identifying information, but other
+//   // authentication providers accept additional data, like a user's email and
+//   // password.
 
-  const credentials: Realm.Credentials = Realm.Credentials.anonymous();
+//   const credentials: Realm.Credentials = Realm.Credentials.anonymous();
 
-  // You can log in with any set of credentials using `app.logIn()`
+//   // You can log in with any set of credentials using `app.logIn()`
 
-  const user: Realm.User = await RealmApp.logIn(credentials);
+//   const user: Realm.User = await RealmApp.logIn(credentials);
 
-  console.log(`Logged in with the user id: ${user.id}`);
-};
-handleLogin().catch(err => {
-  console.error("Failed to log in:", err)
-});
+//   console.log(`Logged in with the user id: ${user.id}`);
+// };
 
-const books = [
-  {
-    title: 'The Awakening',
-    author: 'Kate Chopin',
-  },
-  {
-    title: 'City of Glass',
-    author: 'Paul Auster',
-  },
-];
+// handleLogin().catch(err => {
+//   console.error("Failed to log in:", err)
+// });
+
+// const books = [
+//   {
+//     title: 'The Awakening',
+//     author: 'Kate Chopin',
+//   },
+//   {
+//     title: 'City of Glass',
+//     author: 'Paul Auster',
+//   },
+// ];
 
 // Resolvers define the technique for fetching the types defined in the
 // schema. This resolver retrieves books from the "books" array above.
