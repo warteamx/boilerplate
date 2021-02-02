@@ -5,20 +5,15 @@ import useFetch from "react-fetch-hook";
 import { useParams, useHistory } from "react-router-dom";
 
 import { makeStyles, Typography, Grid, Container, Button } from '@material-ui/core';
-import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
-import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import { red } from '@material-ui/core/colors';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
 import MoreVertIcon from '@material-ui/icons/MoreVert'
-import Skeleton from '@material-ui/lab/Skeleton';
-import VisibilityIcon from '@material-ui/icons/Visibility';
 
 
 interface GnomeData {
@@ -57,18 +52,20 @@ export default function GnomeCard(): ReactElement {
 
   useEffect(() => {
     // Filter Data to simulate real API response, with just 1 element
-    setGnome(data?.Brastlewark?.filter((item: any) => item.id == params?.id)[0])
-  }, [data])
+    setGnome(data?.Brastlewark?.filter((item: any) => item.id === params?.id)[0])
+  }, [data, params])
 
- const handleClick = (e : any) => {
-  history.push(`/altran/`);
-}
+  const handleClick = (e: any) => {
+    history.push(`/altran/`);
+  }
 
   return (
     <>
       <Container maxWidth="md">
 
-<Button onClick={handleClick}> Go back </Button>
+        <Button onClick={handleClick}> Go back </Button>
+
+        {error ? "error" : null}
 
         {isLoading ? "loading" :
           <Grid item xs={12} >

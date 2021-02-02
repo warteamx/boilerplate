@@ -2,7 +2,7 @@ import React, { ReactElement, useState, useEffect } from 'react'
 
 
 import TextField from '@material-ui/core/TextField';
-import { Grid, Slider, Typography, Paper, Box } from '@material-ui/core';
+import { Grid, Slider, Typography, Paper } from '@material-ui/core';
 
 
 interface Props {
@@ -29,7 +29,7 @@ export default function Filter({ filterBy }: Props): ReactElement {
 
   useEffect(() => {
     filterBy(name, age);
-  }, [name, age])
+  }, [name, age, filterBy])
 
   return (
     <Paper elevation={0} style={{ padding: 30 }} >

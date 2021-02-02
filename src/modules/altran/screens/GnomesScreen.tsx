@@ -3,7 +3,7 @@ import React, { ReactElement, useState } from 'react'
 
 import useFetch from "react-fetch-hook";
 
-import { makeStyles, Container, Box, Grid } from '@material-ui/core';
+import { makeStyles, Container, Box} from '@material-ui/core';
 import GnomesList from '../elements/GnomeList/GnomeList';
 import Pagination from '@material-ui/lab/Pagination';
 import Filter from '../elements/Filter/Filter';
