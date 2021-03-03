@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
 import AppBar from '@material-ui/core/AppBar';
-import CameraIcon from '@material-ui/icons/PhotoCamera';
+import SettingsIcon from '@material-ui/icons/Settings';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { Button, makeStyles } from '@material-ui/core';
@@ -42,9 +42,9 @@ export default function Header({ link, linkText, title }: Props): ReactElement {
             <AppBar position="relative">
                 <Toolbar >
                     <Button component={Link} to="/" className={classes.link}>
-                        <CameraIcon className={classes.icon} />
+                        <SettingsIcon className={classes.icon} />
                         <Typography variant="h6" className={classes.title} color="inherit" noWrap>
-                            MERN APP - {process.env.REACT_APP_VERSION}
+                            Netenders - {process.env.REACT_APP_VERSION}
                         </Typography>
                     </Button>
                     <Typography variant="h6" className={classes.title} color="inherit" noWrap>
@@ -59,7 +59,7 @@ export default function Header({ link, linkText, title }: Props): ReactElement {
 }
 
 Header.defaultProps = {
-    link: 'https://www.martinreboredo.com/',
-    linkText: 'Martin',
+    link: 'https://www.netenders.com/',
+    linkText: ' User ',
     title: " "
 }

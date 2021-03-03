@@ -1,6 +1,3 @@
-# axpel Readme File: 
-Los ejercicios se encuentran en esta url: 
-https://github.com/martinrebo/boilerplate/tree/main/src/axpel
 
 # PROJECT
 - *Description:* A Development boileplate / starter code for apps
