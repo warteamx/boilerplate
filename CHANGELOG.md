@@ -1,5 +1,24 @@
 # Changelog
 
+<a name="0.4.1"></a>
+## 0.4.1 (2021-03-03)
+
+- We added a rundimentary login with Google\
+
+*Next Steps:*
+- Persist User Login (Session Cookies ) - front end
+- Get User auth from database 
+
+### Added
+
+- ✨ Create Login [[552b311](https://github.com/martinrebo/boilerplate/commit/552b3116f7af2e1582dc3557e22ff7fd033484c0)]
+- ✅ update test [[6cf90e2](https://github.com/martinrebo/boilerplate/commit/6cf90e2f0b92af72b8ece826b4ce2decf46f38a7)]
+
+### Miscellaneous
+
+-  Merge pull request [#19](https://github.com/martinrebo/boilerplate/issues/19) from martinrebo/issue-18-Netenders_Eviroment [[4eb519a](https://github.com/martinrebo/boilerplate/commit/4eb519a7542039ebe66f1ba77bfe346cea83ce91)]
+
+
 <a name="0.4.0"></a>
 ## 0.4.0 (2021-03-03)
 - Adapt enviroment to netenders Admin Panel 
