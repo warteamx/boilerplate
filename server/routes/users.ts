@@ -3,7 +3,7 @@ import models from '../models/index'
 
 // api/user/
 export const getUser = async (req: any, res: any) => {
-  // const id = req.params.id;
+  const id = req.params.id;
   console.log("request made", req.params)
 
   // let msg = new models.User({
