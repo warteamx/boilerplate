@@ -12,6 +12,16 @@ export function addMap(Map: any) {
 }
 
 
+export function loginUser(user: any) {
+  console.log("user", user)
+  const action: any = {
+    type: actionTypes.ADD_MAP,
+    user
+  };
+
+  return action
+}
+
 export function addMessage(Message: IMessage) {
   
   const action: MessageAction = {

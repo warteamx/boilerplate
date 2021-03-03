@@ -9,6 +9,7 @@ import { connectDb } from './models';
 // import Realm from "realm"
 import { postMessages, putMessage } from './routes/messages';
 import { getUser } from './routes/users';
+import { authUser } from './routes/auth';
 
 import { test } from './routes/test';
 
@@ -75,7 +76,10 @@ server.applyMiddleware({ app });
 app.get('/api/test', test);
 
 // user
-app.get('/api/users/:id', getUser);
+app.get('/api/users/', getUser);
+
+// auth 
+app.post('/api/auth/', authUser)
 
 // messages
 
