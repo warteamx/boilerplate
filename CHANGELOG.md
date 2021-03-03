@@ -1,5 +1,20 @@
 # Changelog
 
+<a name="0.4.0"></a>
+## 0.4.0 (2021-03-03)
+- Adapt enviroment to netenders Admin Panel 
+- Create Home Page 
+
+
+### Fixed
+
+- 🐛 Fix enviroment [[a213c0e](https://github.com/martinrebo/boilerplate/commit/a213c0e00fc28d93cc52b191da9e0d4a1268c995)]
+
+### Miscellaneous
+
+-  Merge pull request [#17](https://github.com/martinrebo/boilerplate/issues/17) from martinrebo/issue-16-Altran-test [[b97fd72](https://github.com/martinrebo/boilerplate/commit/b97fd7207309230234ef22dae3d2d0b1369b288f)]
+
+
 <a name="0.3.7"></a>
 ## 0.3.7 (2021-02-02)
 

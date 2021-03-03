@@ -10,8 +10,7 @@ export default function HomeScreen() {
         <>
             <Header />
             <Hero />
-            <Album />
-            <Footer title="MERN APP" subtitle="Boilerplate code for an example of a MERN App" />
+            <Footer title="Netenders" subtitle="Admin Panel " />
             <Copyright />
         </>
     );
