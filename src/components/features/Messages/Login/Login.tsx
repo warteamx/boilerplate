@@ -17,9 +17,8 @@ export const Login = () => {
 
     const responseGoogle = (response: any) => {
         console.log(response);
-        history.push('/checker')
     } 
-    
+
     const handleLogin = async (googleData: any) => {
         const res = await fetch("/api/auth/", {
             method: "POST",
