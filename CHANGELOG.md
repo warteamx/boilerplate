@@ -1,5 +1,28 @@
 # Changelog
 
+<a name="0.4.2"></a>
+## 0.4.2 (2021-03-04)
+Funtionality: 
+- User can navigate to the main Admin Panel Screen
+- User can navigate to the Store Front Admin Screen 
+
+### Added
+
+- 👷‍♂️ Add env vars to Google Build [[12098b9](https://github.com/martinrebo/boilerplate/commit/12098b9bc86cc63ddbdebaf290b8b41747d70077)]
+- ✨ Add Admin Panel Screen [[1cf4b00](https://github.com/martinrebo/boilerplate/commit/1cf4b003ab39ba75377a8ffca5381231c10d7d73)]
+
+### Fixed
+
+- 🐛 Undo failiing login redirection [[ae4580a](https://github.com/martinrebo/boilerplate/commit/ae4580acbccfcee19fe608565c8a6f2e33ce0e93)]
+- 🐛 Fix Secret Env [[a42e6fb](https://github.com/martinrebo/boilerplate/commit/a42e6fbb5a1f3fe9ad74b8d9fc6dddf8b43cb8de)]
+- 🐛 Fix Build Secret [[ac921a9](https://github.com/martinrebo/boilerplate/commit/ac921a9e08be1faa08785bbb0542b15baa90ff71)]
+- 🐛 Fix typescript error [[e139add](https://github.com/martinrebo/boilerplate/commit/e139add70ee4e411e897bd10b68afcdd0bfa7dc9)]
+
+### Miscellaneous
+
+-  Merge pull request [#21](https://github.com/martinrebo/boilerplate/issues/21) from martinrebo/issue-20-Create_Google_Login [[58e416b](https://github.com/martinrebo/boilerplate/commit/58e416bfb4fdb24e26296ffebffb45a02f8b625e)]
+
+
 <a name="0.4.1"></a>
 ## 0.4.1 (2021-03-03)
 
