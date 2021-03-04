@@ -6,11 +6,20 @@ import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
+import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+
+import ShareIcon from '@material-ui/icons/Share';
+import StorefrontIcon from '@material-ui/icons/Storefront';
+import SpellcheckIcon from '@material-ui/icons/Spellcheck';
+import TrendingUpIcon from '@material-ui/icons/TrendingUp';
+import BackupIcon from '@material-ui/icons/Backup';
+
+import Icon from '@material-ui/core/Icon';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -37,41 +46,41 @@ const useStyles = makeStyles((theme) => ({
 
 const cards = [{
   id: 1,
-  heading: "Airbnb",
-  description: "Sample data from MongoDB containing Listings and Reviews scrapped from Airbnb",
-  image: "airbnb",
-  path: "airbnb",
+  heading: "Store Front Admin",
+  description: "Change Layouts, Banners , Widgets",
+  icon: "store-front",
+  path: "store-front",
   disabled: false
 },
 {
   id: 2,
-  heading: "Shipwreks",
-  description: "Sample data from MongoDB containing Ship Wreks Geospatial Information",
-  image: "shipwerk",
+  heading: "SEO Admin",
+  description: "Change h1, h2 titles, meta tags, structured data",
+  icon: "spellcheck",
   path: "shipwerk",
   disabled: true
 },
 {
   id: 3,
-  heading: "Others",
-  description: "Sample data from MongoDB containing weather data, supplies, restaurants, etc..",
-  image: "others",
+  heading: "Reports",
+  description: "Get Finance and Mk reports",
+  icon: "trending_up",
   path: "others",
   disabled: true
 },{
   id: 4,
-  heading: "Axpel",
-  description: "Technical test for Axpel consulting.",
-  image: "axpel",
+  heading: "Products Admin",
+  description: "Add and delete products",
+  icon: "backup",
   path: "axpel",
-  disabled: false
+  disabled: true
 },{
   id: 5,
-  heading: "Altran",
-  description: "Technical test for Altran",
-  image: "altran",
+  heading: "User Admin",
+  description: "User adminstration ... ",
+  icon: "manage_accounts",
   path: "altran",
-  disabled: false
+  disabled: true
 }]
 
 export default function Album() {
@@ -84,11 +93,7 @@ export default function Album() {
           {cards.map((card) => (
             <Grid item key={card.id} xs={12} sm={6} md={4}>
               <Card className={classes.card}>
-                <CardMedia
-                  className={classes.cardMedia}
-                  image={`https://picsum.photos/seed/${card.image}/200/300`}
-                  title="Image title"
-                />
+                <CardHeader avatar={ <Icon fontSize="large" color="primary">{card.icon}</Icon>  }  />
                 <CardContent className={classes.cardContent}>
                   <Typography gutterBottom variant="h5" component="h2">
                     {card.heading}
@@ -98,8 +103,8 @@ export default function Album() {
                   </Typography>
                 </CardContent>
                 <CardActions>
-                  <Button component={Link} to={`/${card.path}`} size="small" color="primary" disabled={card.disabled}>
-                    See
+                  <Button component={Link} to={`/admin-panel/${card.path}`} size="small" color="primary" variant="contained" disabled={card.disabled}>
+                    Go In
                     </Button>
                 </CardActions>
               </Card>
