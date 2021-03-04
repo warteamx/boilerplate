@@ -49,6 +49,9 @@ To run the project in Dev Mode locally
 ### DOCKER PROD vs DEV
  - https://dev.to/alex_barashkov/using-docker-for-nodejs-in-development-and-production-3cgp
  - https://medium.com/@shakyShane/lets-talk-about-docker-artifacts-27454560384f
+
+ ### CD / CI
+ https://medium.com/@brian.young.pro/how-to-add-environmental-variables-to-google-app-engine-node-js-using-cloud-build-5ce31ee63d7
  
 ### TESTING :
 #### Testing React
