@@ -8,16 +8,18 @@ import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 
 
-const responseGoogle = (response: any) => {
-    console.log(response);
-} 
+
 
 
 
 export const Login = () => {
     let history = useHistory();
 
-
+    const responseGoogle = (response: any) => {
+        console.log(response);
+        history.push('/checker')
+    } 
+    
     const handleLogin = async (googleData: any) => {
         const res = await fetch("/api/auth/", {
             method: "POST",
