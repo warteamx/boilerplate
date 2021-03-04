@@ -6,6 +6,7 @@ import Copyright from '../../../components/elements/Copyright/Copyright';
 
 import { Grid } from '@material-ui/core';
 import WarningIcon from '@material-ui/icons/Warning';
+import { UpdateBanner } from '../../../modules/StoreFrontAdmin/UpdateBanner';
 
 export default function StoreFront() {
 
@@ -16,6 +17,7 @@ export default function StoreFront() {
             <h1> Store Front Panel </h1>
             <WarningIcon fontSize="large" color="error"/>
             <p> Work in Progress </p>
+            <UpdateBanner />
             </Grid>
 
 

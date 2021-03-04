@@ -11,7 +11,7 @@ import { postMessages, putMessage } from './routes/messages';
 import { getUser } from './routes/users';
 import { authUser } from './routes/auth';
 
-import { test } from './routes/test';
+import { getTest , postTest } from './routes/tests';
 
 
 // const RealmApp = new Realm.App({ id: "application-0-xzvns" });
@@ -72,8 +72,9 @@ server.applyMiddleware({ app });
 
 
 
-// user
-app.get('/api/test', test);
+// test
+app.get('/api/test/', getTest);
+app.post('/api/test/', postTest);
 
 // user
 app.get('/api/users/', getUser);
