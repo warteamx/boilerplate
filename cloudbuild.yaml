@@ -14,11 +14,6 @@ steps:
   args: [ 'run', 'build']
   env: 
   - "REACT_APP_VERSION=0.4.1"
-  secretEnv: ['login-client-id']
-  availableSecrets:
-    secretManager:
-      - versionName: projects/111523193499/secrets/login-client-id/versions/1
-        env: 'login-client-id'
 
 - name: 'gcr.io/cloud-builders/gcloud'
   args: ['app', 'deploy', 'PROD/app.yaml']
