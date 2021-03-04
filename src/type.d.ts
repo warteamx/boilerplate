@@ -25,6 +25,10 @@ interface IMessage {
     value: boolean;
   }
 
+  interface ILogin{
+    value: object;
+  }
+
   // type TestStatus = {
   //   testValue: ITest;
   // };

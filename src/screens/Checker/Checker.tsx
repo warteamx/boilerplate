@@ -5,6 +5,8 @@ import logo from '../../assets/logo.svg';
 import '../../App.css';
 import { toggleTest } from '../../store/actions/actionCreators';
 import Header from '../../components/elements/Header/Header'
+import { Grid } from '@material-ui/core';
+import Footer from '../../components/elements/Footer/Footer';
 
 /**
  * Check if MongoDB / Express / Redux is working properly
@@ -32,25 +34,29 @@ export default function Checker(): ReactElement {
 
     const dispatch: Dispatch<any> = useDispatch();
 
-const handleRedux = 
-useCallback( ()=> dispatch(toggleTest(reduxTest)), [dispatch, reduxTest]  )
+    const handleRedux =
+        useCallback(() => dispatch(toggleTest(reduxTest)), [dispatch, reduxTest])
     return (
-        <div className="App">
+        <>
             <Header />
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>Tech </p>
+            <Grid container direction="column" alignItems="center">
 
-            <ul>
-                <li> React <span role="img" aria-label="green-check">✔️ </span> </li>
-                <li> Typescript <span role="img" aria-label="green-check">✔️ </span> </li>
-                <li> Docker  <span role="img" aria-label="green-check">✔️ </span> </li>
-                <li> MongoDB  <span role="img" aria-label="green-check">✔️ </span></li>
-                <li> {data} </li>
-                <li> Redux is working: {reduxTest.value ? "✔️ ON ⌛ " : " ✔️ OFF ⏳ "}
-            <button onClick={handleRedux}> Check </button> </li>
+                <h1> Logged In successfully </h1>
+                <img src={logo} className="App-logo" alt="logo" />
+                <h2>Tech Usen on this project : </h2>
 
-            </ul>
+                <ul>
+                    <li> React <span role="img" aria-label="green-check">✔️ </span> </li>
+                    <li> Typescript <span role="img" aria-label="green-check">✔️ </span> </li>
+                    <li> Docker  <span role="img" aria-label="green-check">✔️ </span> </li>
+                    <li> MongoDB  <span role="img" aria-label="green-check">✔️ </span></li>
+                    <li> {data} </li>
+                    <li> Redux is working: {reduxTest.value ? "✔️ ON ⌛ " : " ✔️ OFF ⏳ "}
+                        <button onClick={handleRedux}> Check </button> </li>
 
-        </div>
+                </ul>
+            </Grid>
+            <Footer subtitle='Admin Panel Private' />
+        </>
     )
 }

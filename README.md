@@ -39,7 +39,7 @@ To run the project in Dev Mode locally
 - https://dev.to/loujaybee/using-create-react-app-with-express
 - https://medium.com/@anwesha_das/a-strongly-typed-create-react-app-with-an-express-api-server-44e2334ccc71
 - https://github.com/goldbergyoni/nodebestpractices  
-
+- https://blog.prototypr.io/how-to-build-google-login-into-a-react-app-and-node-express-api-821d049ee670
 
 ## REDUX
 - https://www.freecodecamp.org/news/how-to-use-redux-in-your-react-typescript-app/
