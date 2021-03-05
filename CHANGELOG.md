@@ -1,5 +1,19 @@
 # Changelog
 
+<a name="0.4.4"></a>
+## 0.4.4 (2021-03-05)
+New Feature: 
+- User can navigate to admin-panel > Reports and Finances and see a Dashboard with graphs (mock data)
+
+### Added
+
+- ✨ Add Reports Page [[2550c20](https://github.com/martinrebo/boilerplate/commit/2550c20bdf0e169b1ecb3a9fd9f08c9628b8a653)]
+
+### Miscellaneous
+
+-  Merge pull request [#25](https://github.com/martinrebo/boilerplate/issues/25) from martinrebo/issue-24-Create_API_endpoints [[d86cd59](https://github.com/martinrebo/boilerplate/commit/d86cd5935a6ab33451e1104b36d986a46b8331ec)]
+
+
 <a name="0.4.3"></a>
 ## 0.4.3 (2021-03-04)
 

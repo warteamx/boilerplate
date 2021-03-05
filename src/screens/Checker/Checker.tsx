@@ -24,7 +24,7 @@ export default function Checker(): ReactElement {
                 '/api/test',
             );
             const expressCheck = await response.json()
-            setData(expressCheck.data)
+            setData(expressCheck)
         };
         fetchData();
     }, []);
@@ -40,17 +40,15 @@ export default function Checker(): ReactElement {
         <>
             <Header />
             <Grid container direction="column" alignItems="center">
-
-                <h1> Logged In successfully </h1>
                 <img src={logo} className="App-logo" alt="logo" />
-                <h2>Tech Usen on this project : </h2>
+                <h2> Services Health Check  : </h2>
 
                 <ul>
                     <li> React <span role="img" aria-label="green-check">✔️ </span> </li>
                     <li> Typescript <span role="img" aria-label="green-check">✔️ </span> </li>
                     <li> Docker  <span role="img" aria-label="green-check">✔️ </span> </li>
                     <li> MongoDB  <span role="img" aria-label="green-check">✔️ </span></li>
-                    <li> {data} </li>
+                    <li> {data ? "api connected ✔️" : "Error on api ❌"} </li>
                     <li> Redux is working: {reduxTest.value ? "✔️ ON ⌛ " : " ✔️ OFF ⏳ "}
                         <button onClick={handleRedux}> Check </button> </li>
 

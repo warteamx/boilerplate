@@ -7,17 +7,11 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
-import ShareIcon from '@material-ui/icons/Share';
-import StorefrontIcon from '@material-ui/icons/Storefront';
-import SpellcheckIcon from '@material-ui/icons/Spellcheck';
-import TrendingUpIcon from '@material-ui/icons/TrendingUp';
-import BackupIcon from '@material-ui/icons/Backup';
 
 import Icon from '@material-ui/core/Icon';
 
@@ -54,25 +48,24 @@ const cards = [{
 },
 {
   id: 2,
-  heading: "SEO Admin",
-  description: "Change h1, h2 titles, meta tags, structured data",
-  icon: "spellcheck",
-  path: "shipwerk",
-  disabled: true
-},
-{
-  id: 3,
   heading: "Reports",
   description: "Get Finance and Mk reports",
   icon: "trending_up",
-  path: "others",
-  disabled: true
+  path: "reports",
+  disabled: false
 },{
-  id: 4,
+  id: 3,
   heading: "Products Admin",
   description: "Add and delete products",
   icon: "backup",
   path: "axpel",
+  disabled: true
+},{
+  id: 4,
+  heading: "SEO Admin",
+  description: "Change h1, h2 titles, meta tags, structured data",
+  icon: "spellcheck",
+  path: "shipwerk",
   disabled: true
 },{
   id: 5,

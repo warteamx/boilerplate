@@ -10,13 +10,12 @@ import Box from '@material-ui/core/Box';
 
 
 
-
-
 export const Login = () => {
     let history = useHistory();
 
     const responseGoogle = (response: any) => {
         console.log(response);
+        history.push('/checker')
     } 
 
     const handleLogin = async (googleData: any) => {
@@ -32,7 +31,7 @@ export const Login = () => {
         const data = await res.json()
         // store returned user somehow
         console.log(data)
-        history.push('/checker')
+        history.push('/admin-panel')
     }
 
     return (
