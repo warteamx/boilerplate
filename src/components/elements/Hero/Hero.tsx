@@ -38,7 +38,7 @@ export default function Album() {
             <Grid container spacing={5} justify="center">
               <Grid item>
                 <Button component={Link} to={`/checker`} size="small" color="primary" variant="outlined" >
-                  See Tech
+                  Health Check
                     </Button>
               </Grid>
               <Grid item>

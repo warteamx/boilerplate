@@ -11,7 +11,7 @@ interface Props {
 const useStyles = makeStyles((theme) => ({
   root: {
       flexGrow: 1,
-      marginTop: theme.spacing(4),
+      marginTop: 'auto',
 }}))
 
 export default function Footer({ title, subtitle }: Props): ReactElement {
