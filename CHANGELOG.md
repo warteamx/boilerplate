@@ -1,5 +1,20 @@
 # Changelog
 
+<a name="0.4.3"></a>
+## 0.4.3 (2021-03-04)
+
+- User can Modify StoreFront Top Banner (Mock)
+- Created /api/test/ (Post and Get)
+
+### Added
+
+- ✨ Add CRUD funtionality [[0399ba8](https://github.com/martinrebo/boilerplate/commit/0399ba86bb015308231c05be8154a8bbe9d249a5)]
+
+### Miscellaneous
+
+-  Merge pull request [#23](https://github.com/martinrebo/boilerplate/issues/23) from martinrebo/issue-22-Create_BO_Home_Page [[56b6e72](https://github.com/martinrebo/boilerplate/commit/56b6e72fbe163c7c47354c092441fb89308e435a)]
+
+
 <a name="0.4.2"></a>
 ## 0.4.2 (2021-03-04)
 Funtionality: 
