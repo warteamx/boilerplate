@@ -1,5 +1,29 @@
 # Changelog
 
+<a name="0.4.5"></a>
+## 0.4.5 (2021-03-08)
+
+**Issue 28** Add Storefront Home page
+
+**USER STORY:**
+When the user navigate to the StoreFront Admin Page, he sees a Wireframe of the Home Page with the sections that he can modify / update.
+
+**TASK** 
+
+- Create Page with the parts of the Store Front Home Page
+- StoreFront Home Page Sections / Wireframe : 
+
+- - Top Ad Banner / Header / Navigation / Promote Banner / Order Rating Panel / Categories / Best Sellers /Brands Panel / Tags / Footer
+
+### Added
+
+- ✨ Add StoreFront Home Page [[82dc9cb](https://github.com/martinrebo/boilerplate/commit/82dc9cba2b905b0400efb0edfef84a7cf7dc26c1)]
+
+### Miscellaneous
+
+-  Merge pull request [#27](https://github.com/martinrebo/boilerplate/issues/27) from martinrebo/issue-26-Improve_UI [[0fbfd5f](https://github.com/martinrebo/boilerplate/commit/0fbfd5fbfbd474e29da04fdfacbb74625275ff75)]
+
+
 <a name="0.4.4"></a>
 ## 0.4.4 (2021-03-05)
 New Feature: 
