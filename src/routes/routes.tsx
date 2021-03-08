@@ -13,8 +13,9 @@ import AxpelExercise2 from '../axpel/screens/Exercise-2'
 import GnomesScreen from '../modules/altran/screens/GnomesListScreen';
 import GnomeCard from '../modules/altran/screens/GnomeProfileScreen';
 import AdminPanelScreen from '../screens/AdminPanel/AdminPanel';
-import StoreFrontScreen from '../screens/AdminPanel/StoreFront/StoreFront';
-import ReportsScreen from '../screens/AdminPanel/Reports/Reports';
+import StoreFrontScreen from '../screens/StoreFront/StoreFront';
+import ReportsScreen from '../screens/Reports/Reports';
+import TopAdBannerScreen from '../screens/StoreFront/TopAdBanner/TopAdBanner'
 
 export default function Routes(): ReactElement {
     return (
@@ -29,6 +30,7 @@ export default function Routes(): ReactElement {
                 <Route path="/altran/user/:id" component={GnomeCard} />
                 <Route path="/altran" component={GnomesScreen} />
                 <Route path="/admin-panel/reports" component={ReportsScreen} />
+                <Route path="/admin-panel/store-front/top-ad-banner" component={TopAdBannerScreen} />
                 <Route path="/admin-panel/store-front" component={StoreFrontScreen} />
                 <Route path="/admin-panel" component={AdminPanelScreen} />
                 <Route path="/" component={Home} />
