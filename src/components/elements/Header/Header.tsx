@@ -9,22 +9,29 @@ import { Link } from 'react-router-dom';
 
 interface Props {
     link: string,
-    linkText: string
-    title: string
+    linkText: string,
+    title: string,
+    handleDrawerToogle: any
 
 }
-export default function Header({ link, linkText, title }: Props): ReactElement {
-
+export default function Header({ link, linkText, title, handleDrawerToogle }: Props): ReactElement {
 
     const useStyles = makeStyles((theme) => ({
         root: {
+            marginBottom: theme.spacing(5),
             flexGrow: 1,
-            marginBottom: theme.spacing(5)
+            flexDirection: "row"
+        },
+        grow: {
+            flexGrow: 1,
         },
         icon: {
             marginRight: theme.spacing(2),
         },
         title: {
+            flexGrow: 1
+        },
+        toolbar: {
             flexGrow: 1
         },
         link: {
@@ -38,21 +45,21 @@ export default function Header({ link, linkText, title }: Props): ReactElement {
 
     const classes = useStyles();
     return (
-        <div className={classes.root}>
-            <AppBar position="relative">
-                <Toolbar >
-                    <Button component={Link} to="/" className={classes.link}>
-                        <SettingsIcon className={classes.icon} />
-                        <Typography variant="h6" className={classes.title} color="inherit" noWrap>
-                            Netenders - {process.env.REACT_APP_VERSION}
-                        </Typography>
-                    </Button>
-                    <Typography variant="h6" className={classes.title} color="inherit" noWrap>
-                        {title}
-                    </Typography>
-                    <Button color="inherit" href={link} target="_blank">{linkText}</Button>
+        <div className={classes.grow}>
+            <AppBar position="sticky" className={classes.root}>
+                <Toolbar className={classes.toolbar}
+                    onClick={handleDrawerToogle} >
+                    <SettingsIcon className={classes.icon} />
                 </Toolbar>
-
+                <Button component={Link} to="/" className={classes.link}>
+                    <Typography variant="h6" className={classes.title} color="inherit" noWrap>
+                        Netenders - {process.env.REACT_APP_VERSION}
+                    </Typography>
+                </Button>
+                <Typography variant="h6" className={classes.title} color="inherit" noWrap>
+                    {title}
+                </Typography>
+                <Button color="inherit" href={link} target="_blank">{linkText}</Button>
             </AppBar>
         </div>
     )
@@ -61,5 +68,6 @@ export default function Header({ link, linkText, title }: Props): ReactElement {
 Header.defaultProps = {
     link: 'https://www.netenders.com/',
     linkText: ' User ',
-    title: " "
+    title: " ",
+    handleDrawerToogle: () => { }
 }
