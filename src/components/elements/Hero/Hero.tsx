@@ -10,6 +10,7 @@ import { Button, Card, CardContent, CardActions, CardMedia, Box } from '@materia
 
 import axpel from '../../../modules/axpel/logo-xl-1.png';
 import altran from '../../../modules/altran/logo.svg';
+import netenders from '../../../modules/netenders.png';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -60,7 +61,7 @@ export default function Album() {
 
             </Grid>
             <Grid container spacing={2} justify="center">
-              <Grid item>
+              <Grid item >
                 <Card className={classes.card}>
                   <CardContent>
                     <Typography>
@@ -77,19 +78,36 @@ export default function Album() {
                 </Card>
               </Grid>
 
-              <Grid item>
+              <Grid item  >
                 <Card className={classes.card}>
                   <CardContent>
                     <Typography>
                       Technical Test
                     </Typography>
                     <Box mt={2} className={classes.media}>
-                    <img src={altran} alt="altran" />
+                    <img src={altran} className={classes.media} alt="altran" />
                     </Box>
 
                   </CardContent>
                   <CardActions>
                     <Button component={Link} to={`/altran`} >Let´s see it</Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+
+              <Grid item  >
+                <Card className={classes.card}>
+                  <CardContent>
+                    <Typography>
+                      Admin Panel
+                    </Typography>
+                    <Box mt={2} >
+                    <img src={netenders} className={classes.media} alt="netenders" />
+                    </Box>
+
+                  </CardContent>
+                  <CardActions>
+                    <Button component={Link} to={`/admin-panel`} >Let´s see it</Button>
                   </CardActions>
                 </Card>
               </Grid>

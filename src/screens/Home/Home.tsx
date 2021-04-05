@@ -18,9 +18,13 @@ export default function HomeScreen() {
                         <Login />
                     </Grid>
                 </Grid>
+                <Grid item justify="center" alignContent="center" alignItems="center">
+                    <Footer title="Boiler Plate" subtitle="Admin Panel " />
+                    <Copyright />
+                </Grid>
+
             </Layout>
-            <Footer title="Netenders" subtitle="Admin Panel " />
-            <Copyright />
+
         </>
     );
 }
