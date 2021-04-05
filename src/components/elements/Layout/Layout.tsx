@@ -141,7 +141,7 @@ export default function Layout( {children} :any) {
                     </IconButton>
                     <Button component={Link} to="/" className={classes.link}>
                         <Typography variant="h6" className={classes.title} color="inherit" noWrap>
-                            Netenders - {process.env.REACT_APP_VERSION}
+                            Boilerplate - {process.env.REACT_APP_VERSION}
                         </Typography>
                     </Button>
                     <IconButton color="inherit">
