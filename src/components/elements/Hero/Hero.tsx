@@ -6,9 +6,10 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import { Button, Card, CardContent, CardActions, CardMedia } from '@material-ui/core';
+import { Button, Card, CardContent, CardActions, CardMedia, Box } from '@material-ui/core';
 
-import axpel from '../../../modules/axpel/logo-xl-1.png'
+import axpel from '../../../modules/axpel/logo-xl-1.png';
+import altran from '../../../modules/altran/logo.svg';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -20,9 +21,12 @@ const useStyles = makeStyles((theme) => ({
   heroButtons: {
     marginTop: theme.spacing(5),
   },
+  card: {
+    width: 250,
+  },
   media: {
-    height: 60,
-    backgroundColor: "black",
+    height: 110,
+    padding: 10,
     width: "100%",
   }
 }));
@@ -57,22 +61,35 @@ export default function Album() {
             </Grid>
             <Grid container spacing={2} justify="center">
               <Grid item>
-                <Card>
+                <Card className={classes.card}>
                   <CardContent>
                     <Typography>
                       Technical Test
                     </Typography>
-                    <Typography variant="h5">
-                      Axpe
-                    </Typography>
+                    <Box mt={2} style={{backgroundColor: "black"}}  className={classes.media} >
+                    <img src={axpel} alt="axpel" style={{width: "100%"}} />
+                    </Box>
+
                   </CardContent>
-                  <CardMedia 
-                  className={classes.media}
-                  image={axpel}
-                  title="Axpe Consulting"
-                  />
                   <CardActions>
                     <Button component={Link} to={`/axpel`} >Let´s see it</Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+
+              <Grid item>
+                <Card className={classes.card}>
+                  <CardContent>
+                    <Typography>
+                      Technical Test
+                    </Typography>
+                    <Box mt={2} className={classes.media}>
+                    <img src={altran} alt="altran" />
+                    </Box>
+
+                  </CardContent>
+                  <CardActions>
+                    <Button component={Link} to={`/altran`} >Let´s see it</Button>
                   </CardActions>
                 </Card>
               </Grid>
