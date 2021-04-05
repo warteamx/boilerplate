@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react'
 import { Link } from 'react-router-dom';
 
-import Footer from '../../components/elements/Footer/Footer'
+import Footer from '../../../components/elements/Footer/Footer'
 
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -10,7 +10,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Container } from '@material-ui/core';
-import Layout from '../../components/elements/Layout/Layout';
+import Layout from '../../../components/elements/Layout/Layout';
 
 const useStyles = makeStyles({
     root: {

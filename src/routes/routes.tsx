@@ -6,9 +6,9 @@ import {
 } from "react-router-dom";
 import Home from '../screens/Home/Home';
 import Checker from '../screens/Checker/Checker';
-import AxpelHome from '../axpel/screens/Home'
-import AxpelExercise1 from '../axpel/screens/Exercise-1'
-import AxpelExercise2 from '../axpel/screens/Exercise-2'
+import AxpelHome from '../modules/axpel/screens/Home'
+import AxpelExercise1 from '../modules/axpel/screens/Exercise-1'
+import AxpelExercise2 from '../modules/axpel/screens/Exercise-2'
 // import Airbnb from '../modules/airbnb/screens/Airbnb';
 import GnomesScreen from '../modules/altran/screens/GnomesListScreen';
 import GnomeCard from '../modules/altran/screens/GnomeProfileScreen';

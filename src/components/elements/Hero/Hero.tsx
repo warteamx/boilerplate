@@ -8,7 +8,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { Button, Card, CardContent, CardActions, CardMedia } from '@material-ui/core';
 
-import axpel from '../../../axpel/logo-xl-1.png'
+import axpel from '../../../modules/axpel/logo-xl-1.png'
 
 
 const useStyles = makeStyles((theme) => ({
