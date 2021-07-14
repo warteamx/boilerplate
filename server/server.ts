@@ -1,25 +1,15 @@
 import bodyParser from 'body-parser';
 import express from 'express';
 import cors from 'cors';
-// import { ApolloServer } from 'apollo-server-express';
-// import { typeDefs } from './graphql/schema'
-// import { resolvers } from './graphql/resolvers'
 
 import { connectDb } from './models';
-// import Realm from "realm"
+
 import { postMessages, putMessage } from './routes/messages';
 import { getUser } from './routes/users';
 import { authUser } from './routes/auth';
 
 import { getTest , postTest } from './routes/tests';
 
-
-
-
-// const server = new ApolloServer({
-//   typeDefs,
-//   resolvers,
-// });
 
 const path = require('path');
 const app = express();
@@ -29,9 +19,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'build/')));
-
-// server.applyMiddleware({ app });
-
 
 
 // test

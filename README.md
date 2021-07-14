@@ -61,6 +61,10 @@ To run the project in Dev Mode locally
 - https://dev.to/maxpou/how-to-mock-date-with-jest-3k4b
 - https://github.com/testing-library/dom-testing-library/issues/410
 
+### AUTH
+- https://dev.to/emeka/securing-your-express-node-js-api-with-firebase-auth-4b5f
+
+
 ## Possible Issues
 - Server is run on ts-dev package, not suitable for production. For production, create a build
 
