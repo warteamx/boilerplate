@@ -4,7 +4,7 @@ import TextField from '@material-ui/core/TextField';
 import { Autocomplete } from '@react-google-maps/api';
 import { useDispatch } from "react-redux";
 import { Dispatch } from "redux";
-import { addMap } from '../../store/actions/actionCreators'
+import { addMap } from '../../../store/actions/actionCreators'
 
 const useStyles = makeStyles((theme) => ({
     root: {

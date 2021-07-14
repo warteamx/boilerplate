@@ -15,8 +15,7 @@
     "google-auth-library": "^7.0.2",
     "graphql": "^15.4.0",
     "graphql-tools": "^7.0.1",
-    "mongoose": "^5.10.9",
-    "realm": "^10.0.0-rc.2"
+    "mongoose": "^5.10.9"
   },
   "scripts": {
     "startDEV:server": "cd server && ts-node-dev --respawn --transpile-only ./server.ts && wait-on tcp:5000",

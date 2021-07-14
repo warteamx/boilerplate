@@ -1,8 +1,8 @@
 import React, { ReactElement, useEffect, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 
-import Footer from '../../components/elements/Footer/Footer'
-import Header from '../../components/elements/Header/Header'
+import Footer from '../../../components/elements/Footer/Footer'
+import Header from '../../../components/elements/Header/Header'
 
 import { Container, Typography } from '@material-ui/core'
 import * as markdown from '../exercise1/Readme.md'

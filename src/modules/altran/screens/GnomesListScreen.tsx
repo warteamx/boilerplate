@@ -10,6 +10,7 @@ import Pagination from '@material-ui/lab/Pagination';
 import Filter from '../elements/Filter/Filter';
 import Header from '../../../components/elements/Header/Header';
 import Footer from '../../../components/elements/Footer/Footer';
+import Layout from '../../../components/elements/Layout/Layout';
 
 
 interface GnomeData {
@@ -80,29 +81,29 @@ export default function Gnomes(): ReactElement {
   }
 
   return (
+    <Layout >
+      <div className={classes.root}>
+        <Container maxWidth="xl">
+          <Filter filterBy={(name, age) => setGnomeSearch({ name, age })} />
 
-    <div className={classes.root}>
-      <Header />
-      <Container maxWidth="xl">
-        <Filter filterBy={(name, age) => setGnomeSearch({ name, age })} />
+          {error ? "error" : null}
 
-        {error ? "error" : null}
-
-        {isLoading ? "loading" :
-          <GnomesList loading={isLoading} data={getFilteredData(slice)} />}
-        <Box p={5} >
-          <Pagination
-            count={Math.ceil(data?.Brastlewark?.length / perPage)}
-            onChange={handlePageClick}
-            color="primary"
-            size="large"
-            style={{ display: "flex", justifyContent: "center" }} />
-        </Box>
+          {isLoading ? "loading" :
+            <GnomesList loading={isLoading} data={getFilteredData(slice)} />}
+          <Box p={5} >
+            <Pagination
+              count={Math.ceil(data?.Brastlewark?.length / perPage)}
+              onChange={handlePageClick}
+              color="primary"
+              size="large"
+              style={{ display: "flex", justifyContent: "center" }} />
+          </Box>
 
 
-      </Container>
-      <Footer subtitle="Altran Challenge"/>
-    </div>
+        </Container>
+        <Footer subtitle="Altran Challenge" />
+      </div>
+    </Layout>
 
 
 
