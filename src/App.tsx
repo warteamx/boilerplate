@@ -1,4 +1,9 @@
 import React from 'react';
+import {
+
+  QueryClient,
+  QueryClientProvider,
+} from 'react-query'
 
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware, Store } from 'redux'
@@ -13,13 +18,19 @@ const store: Store<RootState> & {
   dispatch: DispatchType;
 } = createStore(rootReducer, applyMiddleware(thunk))
 
+
 function App() {
 
+
+  const queryClient = new QueryClient()
+
   return (
-    <Provider store={store}>
-      <CssBaseline />
-      <Routes />
-    </Provider>
+    <QueryClientProvider client={queryClient} >
+      <Provider store={store}>
+        <CssBaseline />
+        <Routes />
+      </Provider>
+    </QueryClientProvider>
   );
 }
 

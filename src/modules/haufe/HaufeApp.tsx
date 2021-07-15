@@ -1,4 +1,5 @@
 import React from 'react'
+import ListView from './Screens/ListView/ListView'
 import Login from './Screens/Login/Login'
 
 export const HaufeApp = () => {
@@ -10,6 +11,9 @@ export const HaufeApp = () => {
      <button> See Code (Github) </button>
      <div>
        <Login />
+     </div>
+     <div>
+       <ListView />
      </div>
     </div>
   )

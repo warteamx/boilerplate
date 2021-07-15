@@ -1,7 +1,6 @@
 import React, { ReactElement , useState, useEffect} from 'react'
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase'
-import { userInfo } from 'os';
 
 
 // Configure Firebase.
@@ -57,19 +56,17 @@ function Login(): ReactElement {
         <div style={{border: "1px solid green"}}>
         <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
         </div>
-
-        {user?.displayName}
       </div>
     );
   }
 
   return (
-    <div style={{border: "1px solid green"}}>
-      <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
-
-      {user?.displayName}
+    <div>
+      <h1>My App</h1>
+      <p>Welcome {firebase.auth().currentUser?.displayName }! You are now signed-in!</p>
+      <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
     </div>
-  )
+  );
 }
 
 export default Login

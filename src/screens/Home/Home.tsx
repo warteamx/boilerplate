@@ -15,10 +15,10 @@ export default function HomeScreen() {
                         <Hero />
                     </Grid>
                     <Grid item>
-                        <Login />
+                        {/* <Login /> */}
                     </Grid>
                 </Grid>
-                <Grid item justify="center" alignContent="center" alignItems="center">
+                <Grid item >
                     <Footer title="Boiler Plate" subtitle="Admin Panel " />
                     <Copyright />
                 </Grid>

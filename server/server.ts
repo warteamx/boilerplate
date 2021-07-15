@@ -7,8 +7,11 @@ import { connectDb } from './models';
 import { postMessages, putMessage } from './routes/messages';
 import { getUser } from './routes/users';
 import { authUser } from './routes/auth';
+import  { getRickMortyApi  } from './routes/rickMorty.route'
 
 import { getTest , postTest } from './routes/tests';
+
+import authFirebase from './middleware/firebaseauth'
 
 
 const path = require('path');
@@ -20,21 +23,25 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'build/')));
 
+// RickMorty
 
-// test
-app.get('/api/test/', getTest);
-app.post('/api/test/', postTest);
+app.use(authFirebase)
 
-// user
-app.get('/api/users/', getUser);
+app.get('/api/rick/', getRickMortyApi)
 
-// auth 
-app.post('/api/auth/', authUser)
+// // test
+// app.get('/api/test/', getTest);
+// app.post('/api/test/', postTest);
 
-// messages
+// // user
+// app.get('/api/users/', getUser);
 
-app.post('/api/messages', postMessages);
-app.put('/api/messages/:id', putMessage);
+// // auth 
+// // app.post('/api/auth/', authUser)
+
+// // messages
+// app.post('/api/messages', postMessages);
+// app.put('/api/messages/:id', putMessage);
 
 
 
