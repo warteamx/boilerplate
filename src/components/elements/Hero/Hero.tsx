@@ -11,6 +11,7 @@ import { Button, Card, CardContent, CardActions, CardMedia, Box } from '@materia
 import axpel from '../../../modules/axpel/logo-xl-1.png';
 import altran from '../../../modules/altran/logo.svg';
 import netenders from '../../../modules/netenders.png';
+import haufe from '../../../modules/haufe/haufe-logo.png'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -108,6 +109,23 @@ export default function Album() {
                   </CardContent>
                   <CardActions>
                     <Button component={Link} to={`/admin-panel`} >Let´s see it</Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+
+              <Grid item  >
+                <Card className={classes.card}>
+                  <CardContent>
+                    <Typography>
+                     Rick and Morty App
+                    </Typography>
+                    <Box mt={2} >
+                    <img src={haufe} className={classes.media} alt="hafue logo" />
+                    </Box>
+
+                  </CardContent>
+                  <CardActions>
+                    <Button component={Link} to={`/haufe`} >Let´s see it</Button>
                   </CardActions>
                 </Card>
               </Grid>
