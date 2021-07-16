@@ -1,11 +1,11 @@
 import React, { ReactElement } from 'react'
 import { useQuery } from 'react-query'
-
+import fetchAPI from '../../../../utils/fetchAuth'
 
  function ListView(): ReactElement {
 
 
-    const { isLoading, isError, data, error } = useQuery('todos', () => fetch("/api/rick/").then(res=>res.json()) )
+    const { isLoading, isError, data, error } = useQuery('todos', () => fetchAPI("/api/rick/") )
 
     if (isLoading) return <> 'Loading...' </>
 

@@ -1,10 +1,8 @@
 import React, { ReactElement, useState, useEffect, useCallback } from 'react'
-import { useSelector, shallowEqual, useDispatch } from "react-redux";
-import { Dispatch } from "redux";
 import logo from '../../assets/logo.svg';
 import '../../App.css';
-import { toggleTest } from '../../store/actions/actionCreators';
-import Header from '../../components/elements/Header/Header'
+// import { toggleTest } from '../../store/actions/actionCreators';
+
 import { Grid } from '@material-ui/core';
 import Footer from '../../components/elements/Footer/Footer';
 import Layout from '../../components/elements/Layout/Layout';
@@ -31,12 +29,6 @@ export default function Checker(): ReactElement {
     }, []);
 
 
-    const reduxTest = useSelector((state: State) => state.test, shallowEqual)
-
-    const dispatch: Dispatch<any> = useDispatch();
-
-    const handleRedux =
-        useCallback(() => dispatch(toggleTest(reduxTest)), [dispatch, reduxTest])
     return (
         <>
             <Layout>
@@ -50,8 +42,8 @@ export default function Checker(): ReactElement {
                         <li> Docker  <span role="img" aria-label="green-check">✔️ </span> </li>
                         <li> MongoDB  <span role="img" aria-label="green-check">✔️ </span></li>
                         <li> {data ? "api connected ✔️" : "Error on api ❌"} </li>
-                        <li> Redux is working: {reduxTest.value ? "✔️ ON ⌛ " : " ✔️ OFF ⏳ "}
-                            <button onClick={handleRedux}> Check </button> </li>
+                        <li> Redux is working
+                            <button > Check </button> </li>
                     </ul>
                 </Grid>
             </Layout>

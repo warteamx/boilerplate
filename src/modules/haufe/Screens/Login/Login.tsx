@@ -37,7 +37,7 @@ function Login(): ReactElement {
     <div>
       <h1>My App</h1>
       <p>Welcome {firebase.auth().currentUser?.displayName }! You are now signed-in!</p>
-      <a onClick={() => firebase.auth().signOut()}>Sign-out</a>
+      <button onClick={() => firebase.auth().signOut()}>Sign-out</button>
     </div>
   );
 }
