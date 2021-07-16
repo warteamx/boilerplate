@@ -6,7 +6,10 @@ export const getRickMortyApi = async (req: Request, res: Response) => {
 
     const user = req['currentUser'];
 
-    console.log(user)
+    if (!user) { 
+        res.status(403).send('You must be logged in!');
+    }
+
     try {
         let result = await fetch(`https://rickandmortyapi.com/api/`)
         let data = await result.json()

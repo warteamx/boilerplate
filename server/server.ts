@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'build/')));
 
 app.use(authFirebase)
 
-app.get('/api/rick/', getRickMortyApi)
+app.get('/api/rick/', authFirebase,  getRickMortyApi)
 
 // // test
 // app.get('/api/test/', getTest);
