@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import User from './user';
 import Message from './message';
 import Test from './test'
+import Favs from './rickMorty.model'
 
 //mongodb://mongodb:27017/api
 //process.env.PORT
@@ -14,7 +15,7 @@ import Test from './test'
 
 
 const connectDb = () => {
-  return mongoose.connect(  process.env.MONGO_DRIVER || "mongodb+srv://nap-admin:gzRpnLItCZaAmiix@cluster0.owcgb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority" ,
+  return mongoose.connect(  process.env.MONGO_DRIVER || "mongodb+srv://nap-admin:gzRpnLItCZaAmiix@cluster0.owcgb.mongodb.net/rick-and-morty?retryWrites=true&w=majority" ,
     {useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex:true,
@@ -22,7 +23,7 @@ const connectDb = () => {
     });
 };
   
-const models = { User, Message, Test };
+const models = { User, Message, Test, Favs };
 
 export { connectDb };
 

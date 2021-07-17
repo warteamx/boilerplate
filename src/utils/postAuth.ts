@@ -1,18 +1,19 @@
 import firebase from '../firebase/config'
 const auth = firebase.auth();
 
-async function fetchFromAPI(url: string,) {
+async function postAPI(url: string, body?: string) {
 
   try {
     const user = auth.currentUser;
     const token = user && (await user.getIdToken());
 
     const res = await fetch(url, {
-      method: "GET",
+      method: "POST",
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${token}`,
       },
+      body: JSON.stringify({id: body})
     });
     return res.json();
 
@@ -24,4 +25,4 @@ async function fetchFromAPI(url: string,) {
 
 }
 
-export default fetchFromAPI
+export default postAPI

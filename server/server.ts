@@ -7,7 +7,7 @@ import { connectDb } from './models';
 import { postMessages, putMessage } from './routes/messages';
 import { getUser } from './routes/users';
 import { authUser } from './routes/auth';
-import  { getRickMortyApi  } from './routes/rickMorty.route'
+import  { getRickMortyApi, postFavs  } from './routes/rickMorty.route'
 
 import { getTest , postTest } from './routes/tests';
 
@@ -23,12 +23,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'build/')));
 
-// RickMorty
+// RickMorty 
 
 app.use(authFirebase)
 
-app.get('/api/rick/', authFirebase,  getRickMortyApi)
-
+app.get('/api/characters/', authFirebase,  getRickMortyApi)
+app.post('/api/characters/favs/', authFirebase,  postFavs)
+ 
 // // test
 // app.get('/api/test/', getTest);
 // app.post('/api/test/', postTest);
