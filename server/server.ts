@@ -56,6 +56,7 @@ app.get('*', function (req, res) {
 });
 
 // tslint:disable-next-line:no-console
+ //@ts-ignore
 connectDb().then(() => console.log('DB Connected!'))
   .catch(err => {
     console.log(`DB Connection Error:', ${err}`);

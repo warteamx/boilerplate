@@ -13,7 +13,7 @@ export default function AddFav({ characterID, refresh, liked}: Props): ReactElem
 
   // console.log(data)
 
-  const { data, refetch } = useQuery('favs', () => postAPI("/api/characters/favs", characterID), { enabled: false, refetchOnWindowFocus: false })
+  const { data, refetch, isLoading} = useQuery('favs', () => postAPI("/api/characters/favs", characterID), { enabled: false, refetchOnWindowFocus: false })
 
   const handleClick = (e: any) => {
     console.log(e.target.dataset.id)
@@ -24,10 +24,12 @@ export default function AddFav({ characterID, refresh, liked}: Props): ReactElem
   }
   return (
     <>
-      <button onClick={handleClick}>
-        <span role="img" aria-label="heart" data-id={characterID}> 💖</span>
-        {liked ? "true" : "false"}
-      </button>
+    {
+      isLoading ? "...loading" :       <button onClick={handleClick}>
+      {liked ? <span role="img" aria-label="heart" data-id={characterID}> 💚 Fav </span> : "💖 Add to Fav"}
+    </button>
+    }
+
 
     </>
   )

@@ -1,7 +1,9 @@
-import React, { ReactElement ,useEffect, useState } from 'react'
+import React, { ReactElement, useEffect, useState } from 'react'
 import { useQuery } from 'react-query'
 import fetchAPI from '../../../../utils/fetchAuth'
 import AddFav from './AddFav'
+
+import './ListView.scss'
 
 function ListView(): ReactElement {
 
@@ -10,14 +12,16 @@ function ListView(): ReactElement {
 
     const [liked, setLiked] = useState(false)
 
+    console.log(data)
+
     useEffect(() => {
         setLiked(false)
         refetch()
-        }, [liked, refetch])
+    }, [liked, refetch])
 
-        const handleRefresh = ()=> {
-            setLiked(true)
-        }
+    const handleRefresh = () => {
+        setLiked(true)
+    }
 
     if (isLoading) return <> 'Loading...' </>
 
@@ -29,24 +33,31 @@ function ListView(): ReactElement {
 
 
 
-    return (
-        <div>
-            Fetch sucessfully:
-
+    return (<>
+        <h1>Rick and Morty </h1>
+        <div className="listView-container">
             {data?.data.results.map((char: any, i: any) =>
-                <div key={char.id}>
-                    <div>
-                        <p>  {char.name}
-
-                            <AddFav characterID={char.id} refresh={handleRefresh} liked={data.favs.characterId.includes(char.id) ? true : false}/>
-
-                            {data.favs.characterId.includes(char.id) ? "Liked" : null}</p>
-
+                <div key={char.id} className="listView-item">
+                    <div className="card">
+                        <div className="photo">
+                            <img src={char.image} alt="" />
+                        </div>
+                        <div className="details">
+                            <h3> {char.name}</h3>
+                            <p> {char.species}</p>
+                            <p> {char.status} </p>
+                            <p> {char.gender}</p>
+                            {/* <p>{data.favs.characterId.includes(char.id) ? "Liked" : null}</p> */}
+                        </div>
                     </div>
+                    <div>
+                        <AddFav characterID={char.id} refresh={handleRefresh} liked={data.favs.characterId.includes(char.id) ? true : false} />
+                        </div>
                 </div>)}
 
 
         </div>
+    </>
     )
 }
 

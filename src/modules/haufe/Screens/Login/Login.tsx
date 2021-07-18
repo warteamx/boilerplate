@@ -5,6 +5,8 @@ import firebase, {uiConfig} from '../../../../firebase/config'
 import { useAppDispatch } from '../../../../hooks/hooks'
 import  { registerUser } from '../../../../redux/slices/userSlice'
 
+import logo from '../../RickMortyLogo.png'
+
 function Login(): ReactElement {
 
   const dispatch = useAppDispatch()
@@ -24,7 +26,7 @@ function Login(): ReactElement {
   if (!isSignedIn) {
     return (
       <div>
-        <h1>My App</h1>
+        <img src={logo}  alt="Rick and Morty" />
         <p>Please sign-in:</p>
         <div style={{border: "1px solid green"}}>
         <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
@@ -35,7 +37,7 @@ function Login(): ReactElement {
 
   return (
     <div>
-      <h1>My App</h1>
+      <img src={logo} alt="Rick and Morty" />
       <p>Welcome {firebase.auth().currentUser?.displayName }! You are now signed-in!</p>
       <button onClick={() => firebase.auth().signOut()}>Sign-out</button>
     </div>

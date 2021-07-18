@@ -1,0 +1,30 @@
+.listView-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.listView-item {
+  border: 1px solid black;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.photo {
+  width: 100px;
+  height: 100px;
+overflow: hiddens;
+}
+
+.photo img {
+  width: 100%;
+}
+
+.details p, h3 {
+  margin: 0px
+}
+
+
+
