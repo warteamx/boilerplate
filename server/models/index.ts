@@ -25,6 +25,6 @@ const connectDb = () => {
   
 const models = { User, Message, Test, Favs };
 
-module.exports= {connectDb};
+export {connectDb};
 
 export default models
