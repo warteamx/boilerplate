@@ -1,11 +1,15 @@
-import React, { ReactElement , useState, useEffect} from 'react'
+import React, { ReactElement, useState, useEffect } from 'react'
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
-import firebase, {uiConfig} from '../../../../firebase/config'
+import firebase, { uiConfig } from '../../../../firebase/config'
+import { useHistory } from 'react-router'
 
 import { useAppDispatch } from '../../../../hooks/hooks'
-import  { registerUser } from '../../../../redux/slices/userSlice'
+import { registerUser } from '../../../../redux/slices/userSlice'
 
-import logo from '../../RickMortyLogo.png'
+import './Login.css'
+import ListView from '../ListView/ListView';
+
+import logo from '../../assets/RickMortyLogo.png'
 
 function Login(): ReactElement {
 
@@ -17,29 +21,32 @@ function Login(): ReactElement {
   useEffect(() => {
     const unregisterAuthObserver = firebase.auth().onAuthStateChanged(user => {
       setIsSignedIn(!!user);
-      dispatch(registerUser(user?.displayName || ""))
-      console.log(user)
+      dispatch(registerUser({ displayName: (user?.displayName || ""), uid: (user?.uid || "") }))
     });
     return () => unregisterAuthObserver(); // Make sure we un-register Firebase observers when the component unmounts.
   }, [dispatch]);
 
+  const handleLogOut = async () => {
+    await firebase.auth().signOut()
+  }
+
+
   if (!isSignedIn) {
     return (
-      <div>
-        <img src={logo}  alt="Rick and Morty" />
+      <div className="login-container">
         <p>Please sign-in:</p>
-        <div style={{border: "1px solid green"}}>
-        <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
+        <div style={{ border: "1px solid green" }}>
+          <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()} />
         </div>
       </div>
     );
   }
 
   return (
-    <div>
-      <img src={logo} alt="Rick and Morty" />
-      <p>Welcome {firebase.auth().currentUser?.displayName }! You are now signed-in!</p>
-      <button onClick={() => firebase.auth().signOut()}>Sign-out</button>
+    <div className="login-container">
+      <p>Welcome {firebase.auth().currentUser?.displayName}! You are now signed-in!</p>
+      <button className="logout" onClick={handleLogOut}>Sign-out</button>
+      <ListView />
     </div>
   );
 }

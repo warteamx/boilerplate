@@ -25,7 +25,7 @@ export default function AddFav({ characterID, refresh, liked}: Props): ReactElem
   return (
     <>
     {
-      isLoading ? "...loading" :       <button onClick={handleClick}>
+      isLoading ? <p className="white">  "...loading" </p> :       <button onClick={handleClick} className="button">
       {liked ? <span role="img" aria-label="heart" data-id={characterID}> 💚 Fav </span> : "💖 Add to Fav"}
     </button>
     }

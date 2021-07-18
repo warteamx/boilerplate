@@ -17,10 +17,12 @@ import StoreFrontScreen from '../screens/StoreFront/StoreFront';
 import ReportsScreen from '../screens/Reports/Reports';
 import TopAdBannerScreen from '../screens/StoreFront/TopAdBanner/TopAdBanner'
 import { HaufeApp } from '../modules/haufe/HaufeApp';
+import ListView from '../modules/haufe/Screens/ListView/ListView';
 
 export default function Routes(): ReactElement {
     return (
 
+        
         <Router>
             <Switch>
                 <Route path="/checker" component={Checker} />
@@ -35,6 +37,7 @@ export default function Routes(): ReactElement {
                 <Route path="/admin-panel/store-front" component={StoreFrontScreen} />
                 <Route path="/admin-panel" component={AdminPanelScreen} />
                 <Route path="/haufe" component={HaufeApp} />
+                {/* <Route path="/rick-and-morty" component={ListView} /> */}
                 <Route path="/" component={Home} />
             </Switch>
         </Router>

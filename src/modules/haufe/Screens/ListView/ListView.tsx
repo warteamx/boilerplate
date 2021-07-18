@@ -1,9 +1,14 @@
 import React, { ReactElement, useEffect, useState } from 'react'
 import { useQuery } from 'react-query'
+import { useHistory } from 'react-router';
+
+import { useAppSelector } from '../../../../hooks/hooks'
+
 import fetchAPI from '../../../../utils/fetchAuth'
 import AddFav from './AddFav'
 
-import './ListView.scss'
+import './ListView.css'
+
 
 function ListView(): ReactElement {
 
@@ -12,8 +17,7 @@ function ListView(): ReactElement {
 
     const [liked, setLiked] = useState(false)
 
-    console.log(data)
-
+   
     useEffect(() => {
         setLiked(false)
         refetch()
@@ -30,11 +34,7 @@ function ListView(): ReactElement {
     }
     </>
 
-
-
-
     return (<>
-        <h1>Rick and Morty </h1>
         <div className="listView-container">
             {data?.data.results.map((char: any, i: any) =>
                 <div key={char.id} className="listView-item">
@@ -47,12 +47,12 @@ function ListView(): ReactElement {
                             <p> {char.species}</p>
                             <p> {char.status} </p>
                             <p> {char.gender}</p>
-                            {/* <p>{data.favs.characterId.includes(char.id) ? "Liked" : null}</p> */}
+                            <p>{data.favs?.characterId.includes(char.id) ? "Liked" : "noLike"}</p>
                         </div>
                     </div>
                     <div>
-                        <AddFav characterID={char.id} refresh={handleRefresh} liked={data.favs.characterId.includes(char.id) ? true : false} />
-                        </div>
+                        <AddFav characterID={char.id} refresh={handleRefresh} liked={data.favs?.characterId?.includes(char.id) ? true : false} />
+                    </div>
                 </div>)}
 
 

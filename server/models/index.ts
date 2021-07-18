@@ -19,7 +19,8 @@ const connectDb = () => {
     {useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex:true,
-      keepAlive: true
+      keepAlive: true,
+      useFindAndModify: false 
     });
 };
   

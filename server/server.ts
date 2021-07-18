@@ -4,9 +4,6 @@ import cors from 'cors';
 
 import {connectDb} from './models';
  
-// import { postMessages, putMessage } from './routes/messages';
-// import { getUser } from './routes/users';
-// import { authUser } from './routes/auth';
 import  { getRickMortyApi, postFavs  } from './routes/rickMorty.route'
 
 // import { getTest , postTest } from './routes/tests';
@@ -44,7 +41,7 @@ app.post('/api/characters/favs/', authFirebase,  postFavs)
 // app.post('/api/messages', postMessages);
 // app.put('/api/messages/:id', putMessage);
 
-
+  
 
 
 /**

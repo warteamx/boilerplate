@@ -1,0 +1,15 @@
+.login-container {
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: rgb(0, 119, 255);
+  padding: 20px;
+  font-size: 18px;
+}
+
+.logout {
+
+  background-color: #ff01c1;
+  padding: 10px;
+  display: inline;
+  margin-bottom: 30px;
+}

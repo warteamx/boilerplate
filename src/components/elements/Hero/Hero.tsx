@@ -11,7 +11,7 @@ import { Button, Card, CardContent, CardActions, CardMedia, Box } from '@materia
 import axpel from '../../../modules/axpel/logo-xl-1.png';
 import altran from '../../../modules/altran/logo.svg';
 import netenders from '../../../modules/netenders.png';
-import haufe from '../../../modules/haufe/haufe-logo.png'
+import haufe from '../../../modules/haufe/assets/haufe-logo.png'
 
 
 const useStyles = makeStyles((theme) => ({
