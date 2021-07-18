@@ -1,5 +1,42 @@
 # Changelog
 
+<a name="0.5.0"></a>
+## 0.5.0 (2021-07-17)
+
+### Added
+
+- ✨ Like functionality on [[ff76410](https://github.com/martinrebo/boilerplate/commit/ff7641096d941187b1562bc1e9c69362993f57c2)]
+- ✨ Add Login logic [[b204fba](https://github.com/martinrebo/boilerplate/commit/b204fba594e15690d9c99a3d9dadb88b0d7c2c2a)]
+- ➕ add firebase [[cc52430](https://github.com/martinrebo/boilerplate/commit/cc5243012deaeb4b8ce333dc4e2bfbc4cd2c13c4)]
+- ➕ Add redux toolkit [[e4deb47](https://github.com/martinrebo/boilerplate/commit/e4deb47e7975c0bf42f6f9d676f6ddc72f38e099)]
+- ✨ Add netenders to Home Screen [[3bf79c0](https://github.com/martinrebo/boilerplate/commit/3bf79c09661b249499f9357a27b28ed2ab6832ec)]
+- ✨ Add altran test to homeScreen [[e8e18bf](https://github.com/martinrebo/boilerplate/commit/e8e18bf5eb191680d4ff501b3ca2a868b3847f49)]
+- ✨ Add axpe to homescreen [[9c951d5](https://github.com/martinrebo/boilerplate/commit/9c951d578472062eb640dc6549bce06c41ae1c8e)]
+
+### Changed
+
+- 🚚 Move Axpe to Modules folder [[84e30a2](https://github.com/martinrebo/boilerplate/commit/84e30a268a52937c6373d238299e0867b6d24a1b)]
+
+### Removed
+
+- 🔥 delete unused files for grapqhQL [[0c3ba8a](https://github.com/martinrebo/boilerplate/commit/0c3ba8a1296f783c2f89d8a2b7d642bf09e23fc5)]
+
+### Fixed
+
+- 🐛 Delete Realm package [[10c35e5](https://github.com/martinrebo/boilerplate/commit/10c35e5f131a01695549c2278f46a17904aec1bd)]
+- 🐛 Delete realm [[1198861](https://github.com/martinrebo/boilerplate/commit/1198861b48ab8789827484911ed3529ee17f8c27)]
+
+### Miscellaneous
+
+- 🚧 create fetch Api util [[18605b7](https://github.com/martinrebo/boilerplate/commit/18605b7c523f58a2571de4eda826f6bbfe61a8f1)]
+- 🚧 set up redux toolkit [[ed3f651](https://github.com/martinrebo/boilerplate/commit/ed3f6519bdba33c59048d234ffa4fac704d948e0)]
+- 🚧 WIP - add api route to server [[f265bd0](https://github.com/martinrebo/boilerplate/commit/f265bd01bc181e2480606ac4dc60e80904ab3be4)]
+- 🚧 work in progress [[0254a68](https://github.com/martinrebo/boilerplate/commit/0254a6808fa9ac41fdad7ae9e8e9cacb23819937)]
+- 🚧 create login structure [[1c7a197](https://github.com/martinrebo/boilerplate/commit/1c7a19776d450cd6986f20febbb865e4ed388e2d)]
+-  Merge pull request [#32](https://github.com/martinrebo/boilerplate/issues/32) from martinrebo/issue-31-Create_Front_Page [[23e5382](https://github.com/martinrebo/boilerplate/commit/23e53825ddfb300f611c18cfef1b6190026229f9)]
+-  Merge pull request [#29](https://github.com/martinrebo/boilerplate/issues/29) from martinrebo/issue-28-Add_StoreFront_Home_Page [[7cee1d5](https://github.com/martinrebo/boilerplate/commit/7cee1d5a01f958429b6e12fa62acc0a3ce956769)]
+
+
 <a name="0.4.5"></a>
 ## 0.4.5 (2021-03-08)
 

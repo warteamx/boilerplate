@@ -1,63 +1,18 @@
 import bodyParser from 'body-parser';
 import express from 'express';
 import cors from 'cors';
-import { ApolloServer } from 'apollo-server-express';
-import { typeDefs } from './graphql/schema'
-import { resolvers } from './graphql/resolvers'
 
-import { connectDb } from './models';
-// import Realm from "realm"
-import { postMessages, putMessage } from './routes/messages';
-import { getUser } from './routes/users';
-import { authUser } from './routes/auth';
+import {connectDb} from './models';
+ 
+// import { postMessages, putMessage } from './routes/messages';
+// import { getUser } from './routes/users';
+// import { authUser } from './routes/auth';
+import  { getRickMortyApi, postFavs  } from './routes/rickMorty.route'
 
-import { getTest , postTest } from './routes/tests';
+// import { getTest , postTest } from './routes/tests';
 
-
-// const RealmApp = new Realm.App({ id: "application-0-xzvns" });
-
-// async function handleLogin() {
-//   // Create a Credentials object to identify the user.
-//   // Anonymous credentials don't have any identifying information, but other
-//   // authentication providers accept additional data, like a user's email and
-//   // password.
-
-//   const credentials: Realm.Credentials = Realm.Credentials.anonymous();
-
-//   // You can log in with any set of credentials using `app.logIn()`
-
-//   const user: Realm.User = await RealmApp.logIn(credentials);
-
-//   console.log(`Logged in with the user id: ${user.id}`);
-// };
-
-// handleLogin().catch(err => {
-//   console.error("Failed to log in:", err)
-// });
-
-// const books = [
-//   {
-//     title: 'The Awakening',
-//     author: 'Kate Chopin',
-//   },
-//   {
-//     title: 'City of Glass',
-//     author: 'Paul Auster',
-//   },
-// ];
-
-// Resolvers define the technique for fetching the types defined in the
-// schema. This resolver retrieves books from the "books" array above.
-// const resolvers = {
-//   Query: {
-//     books: () => books,
-//   },
-// };
-
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-});
+import authFirebase from './middleware/firebaseauth'
+ 
 
 const path = require('path');
 const app = express();
@@ -68,24 +23,26 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'build/')));
 
-server.applyMiddleware({ app });
+// RickMorty 
+ //@ts-ignore
+app.use(authFirebase)
 
+app.get('/api/characters/', authFirebase,  getRickMortyApi)
+app.post('/api/characters/favs/', authFirebase,  postFavs)
+ 
+// // test
+// app.get('/api/test/', getTest);
+// app.post('/api/test/', postTest);
 
+// // user
+// app.get('/api/users/', getUser);
 
-// test
-app.get('/api/test/', getTest);
-app.post('/api/test/', postTest);
+// // auth 
+// // app.post('/api/auth/', authUser)
 
-// user
-app.get('/api/users/', getUser);
-
-// auth 
-app.post('/api/auth/', authUser)
-
-// messages
-
-app.post('/api/messages', postMessages);
-app.put('/api/messages/:id', putMessage);
+// // messages
+// app.post('/api/messages', postMessages);
+// app.put('/api/messages/:id', putMessage);
 
 
 
@@ -104,6 +61,6 @@ connectDb().then(() => console.log('DB Connected!'))
     console.log(`DB Connection Error:', ${err}`);
   });
 
-
+ 
 app.listen(port, () => console.log(`Listening on port ${port}
-Graphql on http://localhost:${port}${server.graphqlPath}`));
+http://localhost:${port}`));

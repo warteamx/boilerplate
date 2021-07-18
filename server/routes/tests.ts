@@ -1,10 +1,11 @@
 import models from '../models/index'
 
 export const getTest = async (req: any, res: any) => {
-  let test = await models.Test.find({}).exec()
-    res.json(
-      {test}
-    );
+  // let test = await models.Test.find({}).exec()
+  //   res.json(
+  //     {test}
+  //   );
+  res.json({})
      
   };
 

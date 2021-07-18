@@ -1,6 +1,6 @@
 {
   "name": "react-starter",
-  "version": "0.4.5",
+  "version": "0.5.0",
   "proxy": "http://localhost:5000/",
   "homepage": "https://boilerplate-mern.ey.r.appspot.com/",
   "private": true,
@@ -12,10 +12,12 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
+    "firebase-admin": "^9.10.0",
     "google-auth-library": "^7.0.2",
     "graphql": "^15.4.0",
     "graphql-tools": "^7.0.1",
-    "mongoose": "^5.10.9"
+    "mongoose": "^5.10.9",
+    "react-firebaseui": "^5.0.2"
   },
   "scripts": {
     "startDEV:server": "cd server && ts-node-dev --respawn --transpile-only ./server.ts && wait-on tcp:5000",
@@ -67,6 +69,8 @@
     "clsx": "^1.1.1",
     "create-env": "^1.1.1",
     "cypress": "^5.6.0",
+    "firebase": "^8.7.1",
+    "firebaseui": "^4.8.0",
     "npm-run-all": "^4.1.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -74,6 +78,7 @@
     "react-google-login": "^5.2.2",
     "react-hook-form": "^6.15.4",
     "react-markdown": "^5.0.2",
+    "react-query": "^3.18.1",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",

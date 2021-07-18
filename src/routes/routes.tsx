@@ -16,6 +16,7 @@ import AdminPanelScreen from '../screens/AdminPanel/AdminPanel';
 import StoreFrontScreen from '../screens/StoreFront/StoreFront';
 import ReportsScreen from '../screens/Reports/Reports';
 import TopAdBannerScreen from '../screens/StoreFront/TopAdBanner/TopAdBanner'
+import { HaufeApp } from '../modules/haufe/HaufeApp';
 
 export default function Routes(): ReactElement {
     return (
@@ -33,6 +34,7 @@ export default function Routes(): ReactElement {
                 <Route path="/admin-panel/store-front/top-ad-banner" component={TopAdBannerScreen} />
                 <Route path="/admin-panel/store-front" component={StoreFrontScreen} />
                 <Route path="/admin-panel" component={AdminPanelScreen} />
+                <Route path="/haufe" component={HaufeApp} />
                 <Route path="/" component={Home} />
             </Switch>
         </Router>

@@ -16,6 +16,8 @@ steps:
     - 'REACT_APP_VERSION=${_REACT_APP_VERSION}'
     - 'REACT_APP_GOOGLE_CLIENT_ID=${_REACT_APP_GOOGLE_CLIENT_ID}'
     - 'MONGO_DRIVER=${_MONGO_DRIVER}'
+    - 'FIREBASE_ADMIN=${_FIREBASE_ADMIN}'
+    - 'FIREBASE_CONFIG=${_FIREBASE_CONFIG}'
 - name: node
   entrypoint: npm
   args: [ 'run', 'build']
