@@ -2,17 +2,17 @@ import bodyParser from 'body-parser';
 import express from 'express';
 import cors from 'cors';
 
-import { connectDb } from './models';
-
-import { postMessages, putMessage } from './routes/messages';
-import { getUser } from './routes/users';
-import { authUser } from './routes/auth';
+import {connectDb} from './models';
+ 
+// import { postMessages, putMessage } from './routes/messages';
+// import { getUser } from './routes/users';
+// import { authUser } from './routes/auth';
 import  { getRickMortyApi, postFavs  } from './routes/rickMorty.route'
 
-import { getTest , postTest } from './routes/tests';
+// import { getTest , postTest } from './routes/tests';
 
 import authFirebase from './middleware/firebaseauth'
-
+ 
 
 const path = require('path');
 const app = express();
