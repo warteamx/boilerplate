@@ -36,7 +36,6 @@ async function decodeIDToken(req: Request, res: Response, next: NextFunction) {
     try {
       const decodedToken = await admin.auth().verifyIdToken(idToken);
       req['currentUser'] = decodedToken;
-      // console.log("User Exists", decodedToken)
     } catch (err) {
       console.log(err);
     }

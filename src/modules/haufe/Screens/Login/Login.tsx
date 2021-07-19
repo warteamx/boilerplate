@@ -1,7 +1,6 @@
 import React, { ReactElement, useState, useEffect } from 'react'
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase, { uiConfig } from '../../../../firebase/config'
-import { useHistory } from 'react-router'
 
 import { useAppDispatch } from '../../../../hooks/hooks'
 import { registerUser } from '../../../../redux/slices/userSlice'
@@ -9,7 +8,6 @@ import { registerUser } from '../../../../redux/slices/userSlice'
 import './Login.css'
 import ListView from '../ListView/ListView';
 
-import logo from '../../assets/RickMortyLogo.png'
 
 function Login(): ReactElement {
 
@@ -28,6 +26,7 @@ function Login(): ReactElement {
 
   const handleLogOut = async () => {
     await firebase.auth().signOut()
+    dispatch(registerUser({displayName: "", uid: ""}))
   }
 
 

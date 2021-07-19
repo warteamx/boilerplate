@@ -7,18 +7,18 @@ export const getRickMortyApi = async (req: Request, res: Response) => {
 
     const user = req['currentUser'];
 
-    // console.log(user?.uid)
+    const params = req.query.page
+    // console.log( "Params, GETRICK, " , params)
 
     if (!user) {
         res.status(403).send('You must be logged in!');
     }
 
     try {
-        let result = await fetch(`https://rickandmortyapi.com/api/character`)
+        let result = await fetch(`https://rickandmortyapi.com/api/character/?page=${req.query.page}`)
         let data = await result.json()
         let userFavs = await Favs.findOneAndUpdate({ userId: user.uid }, { userId: user.uid }, { upsert: true, new: true, setDefaultsOnInsert: true }).exec()
 
-        console.log("UserFavs getAPI")
         res.json({ data, favs: userFavs })
 
     } catch (err) {

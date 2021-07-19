@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'build/')));
 // RickMorty 
  //@ts-ignore
 app.use(authFirebase)
-
+ 
 app.get('/api/characters/', authFirebase,  getRickMortyApi)
 app.post('/api/characters/favs/', authFirebase,  postFavs)
  
