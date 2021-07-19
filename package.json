@@ -88,7 +88,6 @@
     "redux-devtools": "^3.7.0",
     "redux-thunk": "^2.3.0",
     "remark-gfm": "^1.0.0",
-    "sass-loader": "^8.0.2",
     "source-map-explorer": "^2.5.0",
     "ts-node-dev": "^1.0.0-pre.64",
     "typescript": "~3.8.0"

@@ -32,7 +32,7 @@ app.post('/api/characters/favs/', authFirebase,  postFavs)
  * in production mode server and index are on the same folder ( In developer mode there is no index file)
  *   */
 app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname + 'build/index.html'));
+  res.sendFile(path.join(__dirname + '/build/index.html'));
 });
 
 // tslint:disable-next-line:no-console

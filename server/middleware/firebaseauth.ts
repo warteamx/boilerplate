@@ -12,7 +12,7 @@ import admin from 'firebase-admin';
 //   credential: admin.credential.cert(serviceAccount)
 // }); 
 
-console.log("firebase config", process.env.FIREBASE_CONFIG)
+// console.log("firebase config", process.env.FIREBASE_CONFIG)
 
 // if (process.env.FIREBASE_CONFIG) admin.initializeApp()
 // if (!process.env.FIREBASE_CONFIG) {
@@ -23,9 +23,6 @@ console.log("firebase config", process.env.FIREBASE_CONFIG)
 // }
 
 admin.initializeApp()
-
-
-
 
 
 /**
