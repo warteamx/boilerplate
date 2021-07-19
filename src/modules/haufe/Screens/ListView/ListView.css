@@ -1,0 +1,57 @@
+.listView-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  text-align: center;
+  grid-gap: 15px;
+  background-color: rgb(218, 250, 203);
+}
+
+.listView-item {
+  border: 3px solid rgb(243, 9, 9);
+  padding: 5px;
+  background-color: rgb(24, 15, 15);
+}
+
+.listView-logo img {
+  margin: 0 auto;
+  max-height: 100px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));;
+}
+
+.photo {
+  width: 125px;
+  height: 125px;
+overflow: hiddens;
+}
+
+.photo img {
+  width: 100%;
+}
+
+.details p, h3 {
+  margin: 0px;
+  text-align: left;
+  color: rgb(14, 255, 6);
+}
+
+.button {
+  background-color: rgb(14, 255, 6);
+  padding: 10px;
+  width: 100%;
+  margin-top: 5px;
+  color: purple;
+  font-weight: bold;
+  text-shadow: white 1px 1px;
+  font-size: 25px;
+}
+
+.white {
+  color: white;
+}
+
+
+

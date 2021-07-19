@@ -1,9 +1,9 @@
 
 import mongoose from 'mongoose';
 
-import User from './user';
-import Message from './message';
-import Test from './test'
+// import User from './user';
+// import Message from './message';
+// import Test from './test'
 import Favs from './rickMorty.model'
 
 //mongodb://mongodb:27017/api
@@ -19,11 +19,12 @@ const connectDb = () => {
     {useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex:true,
-      keepAlive: true
+      keepAlive: true,
+      useFindAndModify: false 
     });
 };
   
-const models = { User, Message, Test, Favs };
+const models = { Favs };
 
 export {connectDb};
 

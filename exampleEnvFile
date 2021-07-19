@@ -1,0 +1,14 @@
+DATABASE_URL= mongodb://localhost:27017/mongodb/boilerplate
+MONGODB=mongodb://mongodb:27017/api
+MONGO_ATLAS_USER=""
+MONGO_ATLAS_PSW=""
+MONGO_COMPASS=""
+MONGO_DRIVER=""
+REACT_APP_VERSION=$npm_package_version
+REACT_APP_GOOGLE=""
+REACT_APP_GOOGLE_CLIENT_ID=""
+FIREBASE_CONFIG={
+  "projectId": "",
+}
+GOOGLE_CLOUD_PROJECT=""
+

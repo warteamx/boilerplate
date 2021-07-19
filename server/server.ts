@@ -4,9 +4,6 @@ import cors from 'cors';
 
 import {connectDb} from './models';
  
-// import { postMessages, putMessage } from './routes/messages';
-// import { getUser } from './routes/users';
-// import { authUser } from './routes/auth';
 import  { getRickMortyApi, postFavs  } from './routes/rickMorty.route'
 
 // import { getTest , postTest } from './routes/tests';
@@ -26,27 +23,10 @@ app.use(express.static(path.join(__dirname, 'build/')));
 // RickMorty 
  //@ts-ignore
 app.use(authFirebase)
-
+ 
 app.get('/api/characters/', authFirebase,  getRickMortyApi)
 app.post('/api/characters/favs/', authFirebase,  postFavs)
  
-// // test
-// app.get('/api/test/', getTest);
-// app.post('/api/test/', postTest);
-
-// // user
-// app.get('/api/users/', getUser);
-
-// // auth 
-// // app.post('/api/auth/', authUser)
-
-// // messages
-// app.post('/api/messages', postMessages);
-// app.put('/api/messages/:id', putMessage);
-
-
-
-
 /**
  * PROD: 
  * in production mode server and index are on the same folder ( In developer mode there is no index file)
@@ -56,6 +36,7 @@ app.get('*', function (req, res) {
 });
 
 // tslint:disable-next-line:no-console
+ //@ts-ignore
 connectDb().then(() => console.log('DB Connected!'))
   .catch(err => {
     console.log(`DB Connection Error:', ${err}`);

@@ -12,6 +12,8 @@ import admin from 'firebase-admin';
 //   credential: admin.credential.cert(serviceAccount)
 // }); 
 
+// console.log("firebase config", process.env.FIREBASE_CONFIG)
+
 // if (process.env.FIREBASE_CONFIG) admin.initializeApp()
 // if (!process.env.FIREBASE_CONFIG) {
 //   let serviceAccount = require('../../../boilerplate-mern-firebase-adminsdk-je4di-f6df6e0167.json')
@@ -21,9 +23,6 @@ import admin from 'firebase-admin';
 // }
 
 admin.initializeApp()
-
-
-
 
 
 /**
@@ -36,7 +35,6 @@ async function decodeIDToken(req: Request, res: Response, next: NextFunction) {
     try {
       const decodedToken = await admin.auth().verifyIdToken(idToken);
       req['currentUser'] = decodedToken;
-      // console.log("User Exists", decodedToken)
     } catch (err) {
       console.log(err);
     }

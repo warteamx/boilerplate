@@ -20,8 +20,9 @@ export const userSlice = createSlice({
   initialState,
   reducers: {
     // Use the PayloadAction type to declare the contents of `action.payload`
-    registerUser: (state, action: PayloadAction<string>) => {
-      state.displayName += action.payload
+    registerUser: (state, action: PayloadAction<userState>) => {
+      state.displayName += action.payload.displayName
+      state.uid += action.payload.uid
     }
   }
 })
