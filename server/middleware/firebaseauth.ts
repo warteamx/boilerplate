@@ -12,15 +12,17 @@ import admin from 'firebase-admin';
 //   credential: admin.credential.cert(serviceAccount)
 // }); 
 
-if (process.env.FIREBASE_CONFIG) admin.initializeApp()
-if (!process.env.FIREBASE_CONFIG) {
-  let serviceAccount = require('../../../boilerplate-mern-firebase-adminsdk-je4di-f6df6e0167.json')
-  admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount)
-  });
-}
+console.log("firebase config", process.env.FIREBASE_CONFIG)
 
-// admin.initializeApp()
+// if (process.env.FIREBASE_CONFIG) admin.initializeApp()
+// if (!process.env.FIREBASE_CONFIG) {
+//   let serviceAccount = require('../../../boilerplate-mern-firebase-adminsdk-je4di-f6df6e0167.json')
+//   admin.initializeApp({
+//     credential: admin.credential.cert(serviceAccount)
+//   });
+// }
+
+admin.initializeApp()
 
 
 
