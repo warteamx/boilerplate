@@ -17,7 +17,7 @@ removed from fav list.
 - Frontend: 
 - - Using React (create react app) / Redux toolkit / React Query
 - - Using Css grid for the layout
-- Backend: Express / Firebase Admin / MongoDB (Atlas)
+- Backend: Express / Firebase Admin / MongoDB (Atlas) / Docker (Only for dev enviroment )
 
 ### LOGIN 
 - Used firebase Auth for Login Functionality.
