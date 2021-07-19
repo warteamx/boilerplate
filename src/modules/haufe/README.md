@@ -27,9 +27,11 @@ removed from fav list.
 
 ## KNOW ISSUES
 - Front & Back: The data is fetched from the database on every "Add to Favs" click. It would be better have a Socket.Io conection to listen for updates on the favs. 
+- Front: Not using Redux. I created a Redux store with Toolkit, and Everytime an user log in/out a dispatch action add the user to the store. I just did this as a way to showcase the use of redux, but I wouldn´t use for a project of this size. It is an overkill.
 - Front: There is an old ( Legacy ) store folder for redux. (It belongs to another tecnicall chanllenge) I didn´t deleted because I want to refactor the old project. 
 - Front: The style and css is very poor (No time for more)
 - Back: Not really MVC.  I didnt create a controller for the route. (I didnt have time, but I like to keep the the database logic outside the route )
+
 
 
 

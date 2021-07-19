@@ -1,8 +1,5 @@
 import React, { ReactElement, useEffect, useState } from 'react'
 import { useQuery } from 'react-query'
-import { useHistory } from 'react-router';
-
-import { useAppSelector } from '../../../../hooks/hooks'
 
 import fetchAPI from '../../../../utils/fetchAuth'
 import AddFav from './AddFav'
@@ -16,7 +13,7 @@ function ListView(): ReactElement {
     const [page, setPage] = useState(1)
 
 
-    const { refetch, isLoading, isError, data, error, isFetching, isPreviousData } = useQuery(['characters', page], () => fetchAPI(`/api/characters/?page=${page}`), { keepPreviousData: true })
+    const { refetch, isLoading,  data, error } = useQuery(['characters', page], () => fetchAPI(`/api/characters/?page=${page}`), { keepPreviousData: true })
 
     const [liked, setLiked] = useState(false)
 
