@@ -1,10 +1,13 @@
 # Changelog
 
-<a name="0.5.0"></a>
-## 0.5.0 (2021-07-17)
+<a name="0.5.1"></a>
+## 0.5.1 (2021-07-19)
+
+HAUFE TECNICAL TEST
 
 ### Added
 
+- 👷‍♂️ add example of enviroment [[5f4aed6](https://github.com/martinrebo/boilerplate/commit/5f4aed60a7a32ca8d19a8afcc5aa973a3eb47790)]
 - ✨ Like functionality on [[ff76410](https://github.com/martinrebo/boilerplate/commit/ff7641096d941187b1562bc1e9c69362993f57c2)]
 - ✨ Add Login logic [[b204fba](https://github.com/martinrebo/boilerplate/commit/b204fba594e15690d9c99a3d9dadb88b0d7c2c2a)]
 - ➕ add firebase [[cc52430](https://github.com/martinrebo/boilerplate/commit/cc5243012deaeb4b8ce333dc4e2bfbc4cd2c13c4)]
@@ -15,19 +18,28 @@
 
 ### Changed
 
+- 🎨 improve code [[8bfa37a](https://github.com/martinrebo/boilerplate/commit/8bfa37a2c0531ae1229cfab5593088aac86c59bd)]
+- 🎨 Improve code and fix bugs [[b28a42c](https://github.com/martinrebo/boilerplate/commit/b28a42c95c2318f4160dbadf960553d02a99d10f)]
+- 🎨 improve code [[d1a5254](https://github.com/martinrebo/boilerplate/commit/d1a525494db9b65179a40d1310cd4b3d6fe3465d)]
 - 🚚 Move Axpe to Modules folder [[84e30a2](https://github.com/martinrebo/boilerplate/commit/84e30a268a52937c6373d238299e0867b6d24a1b)]
 
 ### Removed
 
+- 🔥 Delete unused code [[8e6b8ed](https://github.com/martinrebo/boilerplate/commit/8e6b8ed3131aa273e2aaf10c0f709867502a53fb)]
 - 🔥 delete unused files for grapqhQL [[0c3ba8a](https://github.com/martinrebo/boilerplate/commit/0c3ba8a1296f783c2f89d8a2b7d642bf09e23fc5)]
 
 ### Fixed
 
+- 🐛 firebase type Error [[1055fcb](https://github.com/martinrebo/boilerplate/commit/1055fcbf8fc7761611483b1fb9428c6f671ccb02)]
 - 🐛 Delete Realm package [[10c35e5](https://github.com/martinrebo/boilerplate/commit/10c35e5f131a01695549c2278f46a17904aec1bd)]
 - 🐛 Delete realm [[1198861](https://github.com/martinrebo/boilerplate/commit/1198861b48ab8789827484911ed3529ee17f8c27)]
 
 ### Miscellaneous
 
+- 📝 add docs [[18f01e0](https://github.com/martinrebo/boilerplate/commit/18f01e06330bcde7231a3c280719071a424b40c7)]
+-  Merge pull request [#35](https://github.com/martinrebo/boilerplate/issues/35) from martinrebo/issue-34-_Create_Login [[6458be2](https://github.com/martinrebo/boilerplate/commit/6458be277b3cd36137098be234b16b44340a9f54)]
+-  :bug Firebase in production env [[44fc267](https://github.com/martinrebo/boilerplate/commit/44fc26728eb029e878b9c338956223dba2dd6f84)]
+-  :bug Typescript error with firebase [[33cd287](https://github.com/martinrebo/boilerplate/commit/33cd287f126bae2e1d1a936d389b939bd673aa65)]
 - 🚧 create fetch Api util [[18605b7](https://github.com/martinrebo/boilerplate/commit/18605b7c523f58a2571de4eda826f6bbfe61a8f1)]
 - 🚧 set up redux toolkit [[ed3f651](https://github.com/martinrebo/boilerplate/commit/ed3f6519bdba33c59048d234ffa4fac704d948e0)]
 - 🚧 WIP - add api route to server [[f265bd0](https://github.com/martinrebo/boilerplate/commit/f265bd01bc181e2480606ac4dc60e80904ab3be4)]
