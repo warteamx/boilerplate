@@ -16,6 +16,8 @@
     "google-auth-library": "^7.0.2",
     "graphql": "^15.4.0",
     "graphql-tools": "^7.0.1",
+    "lodash.assign": "^4.2.0",
+    "lodash.values": "^4.3.0",
     "mongoose": "^5.10.9",
     "react-firebaseui": "^5.0.2"
   },

@@ -5,6 +5,7 @@ import cors from 'cors';
 import {connectDb} from './models';
  
 import  { getRickMortyApi, postFavs  } from './routes/rickMorty.route'
+import {getProgram} from './routes/softonic.route'
 
 // import { getTest , postTest } from './routes/tests';
 
@@ -26,6 +27,9 @@ app.use(authFirebase)
  
 app.get('/api/characters/', authFirebase,  getRickMortyApi)
 app.post('/api/characters/favs/', authFirebase,  postFavs)
+
+// Softonic
+app.get('/api/softonic/getProgram',  getProgram)
  
 /**
  * PROD: 
