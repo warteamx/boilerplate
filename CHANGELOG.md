@@ -3,6 +3,8 @@
 <a name="6.0.0"></a>
 ## 6.0.0 (2021-07-31)
 
+Softonic tecnical test
+
 ### Added
 
 - ✅ Add tests to api endpoint [[de5b629](https://github.com/martinrebo/boilerplate/commit/de5b629e526f5b89f2c62d207e3a9a5849239a10)]
