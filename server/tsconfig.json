@@ -9,5 +9,5 @@
       "skipLibCheck": true,
       "outDir": "../PROD"
     },
-    "include": ["routes/**/*", "server.ts"]
+    "include": ["routes/**/*", "server.ts", "__tests__/*.test.ts"]
   }

@@ -48,8 +48,11 @@ app.get('*', function (req, res) {
 connectDb().then(() => console.log('DB Connected!'))
   .catch(err => {
     console.log(`DB Connection Error:', ${err}`);
-  });
+  }); 
 
  
 app.listen(port, () => console.log(`Listening on port ${port}
 http://localhost:${port}`));
+ 
+
+export default app;
