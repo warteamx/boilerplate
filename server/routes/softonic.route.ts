@@ -31,9 +31,9 @@ export const getProgramList = async (req: Request, res: Response) => {
             let authorInfo = devs.find(dev => program.developer_id.toString() === dev.id.toString())
             delete program.developer_id
             // Convert compatible key to string
-            program.compatible.join(" | ")
+            let compatible = program.compatible.join(" | ")
             // Keep the order of the keys as in the exmaple
-            return ({ id: program.id, author_info: { name: authorInfo.name, url: authorInfo.url }, ...program, })
+            return ({ id: program.id, author_info: { name: authorInfo.name, url: authorInfo.url }, ...program, compatible })
         }
         )
 
@@ -68,12 +68,13 @@ export const getProgram = async (req: Request, res: Response) => {
             let authorInfo = devs.find(dev => program.developer_id.toString() === dev.id.toString())
             delete program.developer_id
             // keep object order
-            let data = { id: program.id, author_info: { name: authorInfo.name, url: authorInfo.url }, ...program, }
+
+            let compatible = program.compatible.join(" | ")
+
+            let data = { id: program.id, author_info: { name: authorInfo.name, url: authorInfo.url }, ...program, compatible }
 
             res.json({ data })
         }
-
-
 
 
     } catch (err) {

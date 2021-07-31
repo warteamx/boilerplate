@@ -6,6 +6,7 @@ import {connectDb} from './models';
  
 import  { getRickMortyApi, postFavs  } from './routes/rickMorty.route'
 import {getProgramList, getProgram} from './routes/softonic.route'
+import {getTest} from './routes/test.route'
 
 // import { getTest , postTest } from './routes/tests';
 
@@ -16,8 +17,11 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 5000;
 
+
+ //@ts-ignore https://github.com/expressjs/express/issues/4618
+app.use(bodyParser.urlencoded());
+ //@ts-ignore https://github.com/expressjs/express/issues/4618
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'build/')));
 
@@ -34,6 +38,8 @@ app.post('/api/characters/favs/', authFirebase,  postFavs)
 app.get('/api/softonic/programs/',  getProgramList)
 app.get('/api/softonic/programs/:id',  getProgram)
 
+
+app.get('/api/test',  getTest)
  
 /**
  * PROD: 
