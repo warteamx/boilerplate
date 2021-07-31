@@ -14,16 +14,16 @@ Write a NodeJS API service named **Softonic API** (in the folder `softonic-api`)
 
 
 export const getProgramList = async (req: Request, res: Response) => {
-
+    console.log("getprogramList")
 
     try {
 
-        let devData = await fetch("https://martinreboredo.com/api/developers.json", {method: 'get',
+        let devData = await fetch("https://storage.googleapis.com/softonic/developers.json",{method: 'get',
         headers: { 'Accept': 'application/json',
         'Access-Control-Allow-Origin':'*',
         'Content-Type': 'applications/json' }})
-        let programsData = await fetch('https://martinreboredo.com/api/programs.json', {method: 'get',
-        headers: {           'Accept': 'application/json',
+        let programsData = await fetch('https://storage.googleapis.com/softonic/developers.json',{method: 'get',
+        headers: { 'Accept': 'application/json',
         'Access-Control-Allow-Origin':'*',
         'Content-Type': 'applications/json' }})
         let devs = await devData.json()
@@ -48,19 +48,19 @@ export const getProgramList = async (req: Request, res: Response) => {
     } catch (err) {
         res.status(500)
     }
-
+ 
 };
 
 export const getProgram = async (req: Request, res: Response) => {
-
+console.log("getprogram")
     try {
 
-        let devData = await fetch("https://martinreboredo.com/api/developers.json", {method: 'get',
+        let devData = await fetch("https://storage.googleapis.com/softonic/developers.json",{method: 'get',
         headers: { 'Accept': 'application/json',
         'Access-Control-Allow-Origin':'*',
         'Content-Type': 'applications/json' }})
-        let programsData = await fetch('https://martinreboredo.com/api/programs.json', {method: 'get',
-        headers: {           'Accept': 'application/json',
+        let programsData = await fetch('https://storage.googleapis.com/softonic/developers.json',{method: 'get',
+        headers: { 'Accept': 'application/json',
         'Access-Control-Allow-Origin':'*',
         'Content-Type': 'applications/json' }})
 
