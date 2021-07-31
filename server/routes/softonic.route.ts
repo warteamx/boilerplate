@@ -19,9 +19,13 @@ export const getProgramList = async (req: Request, res: Response) => {
     try {
 
         let devData = await fetch("https://martinreboredo.com/api/developers.json", {method: 'get',
-        headers: { 'Content-Type': 'application/json' }})
+        headers: { 'Accept': 'application/json',
+        'Access-Control-Allow-Origin':'*',
+        'Content-Type': 'applications/json' }})
         let programsData = await fetch('https://martinreboredo.com/api/programs.json', {method: 'get',
-        headers: { 'Content-Type': 'application/json' }})
+        headers: {           'Accept': 'application/json',
+        'Access-Control-Allow-Origin':'*',
+        'Content-Type': 'applications/json' }})
         let devs = await devData.json()
         let programs = await programsData.json()
 
@@ -52,10 +56,14 @@ export const getProgram = async (req: Request, res: Response) => {
     try {
 
         let devData = await fetch("https://martinreboredo.com/api/developers.json", {method: 'get',
-        headers: { 'Content-Type': 'application/json' }})
+        headers: { 'Accept': 'application/json',
+        'Access-Control-Allow-Origin':'*',
+        'Content-Type': 'applications/json' }})
         let programsData = await fetch('https://martinreboredo.com/api/programs.json', {method: 'get',
-        headers: { 'Content-Type': 'application/json' }})
-        
+        headers: {           'Accept': 'application/json',
+        'Access-Control-Allow-Origin':'*',
+        'Content-Type': 'applications/json' }})
+
         let devs = await devData.json()
         let programs = await programsData.json()
 
