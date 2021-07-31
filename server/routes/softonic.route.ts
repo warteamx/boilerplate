@@ -18,8 +18,10 @@ export const getProgramList = async (req: Request, res: Response) => {
 
     try {
 
-        let devData = await fetch("https://martinreboredo.com/api/developers.json")
-        let programsData = await fetch('https://martinreboredo.com/api/programs.json')
+        let devData = await fetch("https://martinreboredo.com/api/developers.json", {method: 'get',
+        headers: { 'Content-Type': 'application/json' }})
+        let programsData = await fetch('https://martinreboredo.com/api/programs.json', {method: 'get',
+        headers: { 'Content-Type': 'application/json' }})
         let devs = await devData.json()
         let programs = await programsData.json()
 
@@ -48,8 +50,12 @@ export const getProgramList = async (req: Request, res: Response) => {
 export const getProgram = async (req: Request, res: Response) => {
 
     try {
-        let devData = await fetch("https://martinreboredo.com/api/developers.json")
-        let programsData = await fetch('https://martinreboredo.com/api/programs.json')
+
+        let devData = await fetch("https://martinreboredo.com/api/developers.json", {method: 'get',
+        headers: { 'Content-Type': 'application/json' }})
+        let programsData = await fetch('https://martinreboredo.com/api/programs.json', {method: 'get',
+        headers: { 'Content-Type': 'application/json' }})
+        
         let devs = await devData.json()
         let programs = await programsData.json()
 
