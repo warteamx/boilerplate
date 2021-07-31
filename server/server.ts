@@ -21,16 +21,19 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use(express.static(path.join(__dirname, 'build/')));
 
-// RickMorty 
+ 
  //@ts-ignore
 app.use(authFirebase)
  
+
+// Haufe Technical Test RickMorty
 app.get('/api/characters/', authFirebase,  getRickMortyApi)
 app.post('/api/characters/favs/', authFirebase,  postFavs)
 
-// Softonic
-app.get('/api/softonic/getProgramList',  getProgramList)
-app.get('/api/softonic/getProgram',  getProgram)
+// Softonic Tecnical Test 
+app.get('/api/softonic/programs/',  getProgramList)
+app.get('/api/softonic/programs/:id',  getProgram)
+
  
 /**
  * PROD: 

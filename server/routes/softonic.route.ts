@@ -2,7 +2,7 @@ import { Request, Response } from 'express'
 import fetch from 'node-fetch';
 import Favs from '../models/rickMorty.model'
 const path = require('path');
-const _ = require('lodash.assign');
+
 
 /**
  * 
@@ -34,6 +34,9 @@ export const getProgramList = async (req: Request, res: Response) => {
             // I suppose that the id property can be a string of numbers and/or letters - So I compare the strings
             let authorInfo = devs.find(dev => program.developer_id.toString() === dev.id.toString())
             delete program.developer_id
+            // Convert compatible key to string
+            program.compatible.join(" | ")
+            // Keep the order of the keys as in the exmaple
             return ({ id: program.id, author_info: { name: authorInfo.name, url: authorInfo.url }, ...program, })
         }
         )
@@ -47,7 +50,11 @@ export const getProgramList = async (req: Request, res: Response) => {
 };
 
 export const getProgram = async (req: Request, res: Response) => {
-    console.log(req.query)
+    console.log("get programs, prarmas, ", req.params.id.toString())
+
+    let id = req.params.id
+    // let id = req.query.id
+
 
     try {
         let devData = await fetch("https://martinreboredo.com/api/developers.json")
@@ -55,13 +62,19 @@ export const getProgram = async (req: Request, res: Response) => {
         let devs = await devData.json()
         let programs = await programsData.json()
 
+        // console.log("data devs", devs , "programs", programs)
+
         // find program by id 
-        let program = programs.find(program => program.id.toString() === req.query.id.toString())
+        console.log("find program by id", programs)
+        let program = programs.find(program => program.id.toString() === req.params.id.toString())
         // get author info
+        console.log("pthtsm", program)
         let authorInfo = devs.find(dev => program.developer_id.toString() === dev.id.toString())
         delete program.developer_id
         // keep object order
         let data = { id: program.id, author_info: { name: authorInfo.name, url: authorInfo.url }, ...program, }
+
+        console.log("data", data)
 
         res.json({ data })
 
