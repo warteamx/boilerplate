@@ -1,9 +1,34 @@
 # Changelog
 
-<a name="0.5.1"></a>
-## 0.5.1 (2021-07-19)
+<a name="6.0.0"></a>
+## 6.0.0 (2021-07-31)
 
-HAUFE TECNICAL TEST
+Softonic tecnical test
+
+### Added
+
+- ✅ Add tests to api endpoint [[de5b629](https://github.com/martinrebo/boilerplate/commit/de5b629e526f5b89f2c62d207e3a9a5849239a10)]
+- ✨ api endpoints working [[ed5b92f](https://github.com/martinrebo/boilerplate/commit/ed5b92f44fd22964b2519b3fa93f089de2769bda)]
+
+### Fixed
+
+- 🐛  [[d9bbcca](https://github.com/martinrebo/boilerplate/commit/d9bbcca641656e4f526351023295646f467f27c6)]
+- 🐛  [[7fddfeb](https://github.com/martinrebo/boilerplate/commit/7fddfeb06510324ac366b59284aee0f0493fd420)]
+- 🐛 try fix cloud error [[9bdb32e](https://github.com/martinrebo/boilerplate/commit/9bdb32ef0963be4c7c6d5e7c87375365a34e9afc)]
+- 🐛 fix firebase auth [[ae8e5f5](https://github.com/martinrebo/boilerplate/commit/ae8e5f50d9e126ac7046331ec0b18dbca984b598)]
+
+### Miscellaneous
+
+- 🚧 start testing suite [[cfa67cd](https://github.com/martinrebo/boilerplate/commit/cfa67cd379107fc057070a7b504d02fc08e65b29)]
+- 📝 Add documentation [[0558c50](https://github.com/martinrebo/boilerplate/commit/0558c50b67ef5ae1a7f447ff04133e55ef7f6555)]
+- 🚧 add route and files [[e136f22](https://github.com/martinrebo/boilerplate/commit/e136f22b7be9155ff37bbe1ccb09204a06827eb9)]
+- 📝 add softonic docs [[6458be7](https://github.com/martinrebo/boilerplate/commit/6458be7086a1035d858bdcfaf5de321b326b2096)]
+-  Merge pull request [#37](https://github.com/martinrebo/boilerplate/issues/37) from martinrebo/issue-36-_Create_UI [[965fb47](https://github.com/martinrebo/boilerplate/commit/965fb476bd18b6dca2cf79e2221aa10409e7f14e)]
+- 🚀 redo cloud build [[358ae84](https://github.com/martinrebo/boilerplate/commit/358ae841b8d08c987b1910cfdaa4dcc4dd089459)]
+
+
+<a name="5.1.1"></a>
+## 5.1.1 (2021-07-19)
 
 ### Added
 
@@ -47,6 +72,31 @@ HAUFE TECNICAL TEST
 - 🚧 create login structure [[1c7a197](https://github.com/martinrebo/boilerplate/commit/1c7a19776d450cd6986f20febbb865e4ed388e2d)]
 -  Merge pull request [#32](https://github.com/martinrebo/boilerplate/issues/32) from martinrebo/issue-31-Create_Front_Page [[23e5382](https://github.com/martinrebo/boilerplate/commit/23e53825ddfb300f611c18cfef1b6190026229f9)]
 -  Merge pull request [#29](https://github.com/martinrebo/boilerplate/issues/29) from martinrebo/issue-28-Add_StoreFront_Home_Page [[7cee1d5](https://github.com/martinrebo/boilerplate/commit/7cee1d5a01f958429b6e12fa62acc0a3ce956769)]
+
+
+<a name="0.8.0"></a>
+## 0.8.0 (2021-07-31)
+
+### Added
+
+- ✅ Add tests to api endpoint [[de5b629](https://github.com/martinrebo/boilerplate/commit/de5b629e526f5b89f2c62d207e3a9a5849239a10)]
+- ✨ api endpoints working [[ed5b92f](https://github.com/martinrebo/boilerplate/commit/ed5b92f44fd22964b2519b3fa93f089de2769bda)]
+
+### Fixed
+
+- 🐛  [[d9bbcca](https://github.com/martinrebo/boilerplate/commit/d9bbcca641656e4f526351023295646f467f27c6)]
+- 🐛  [[7fddfeb](https://github.com/martinrebo/boilerplate/commit/7fddfeb06510324ac366b59284aee0f0493fd420)]
+- 🐛 try fix cloud error [[9bdb32e](https://github.com/martinrebo/boilerplate/commit/9bdb32ef0963be4c7c6d5e7c87375365a34e9afc)]
+- 🐛 fix firebase auth [[ae8e5f5](https://github.com/martinrebo/boilerplate/commit/ae8e5f50d9e126ac7046331ec0b18dbca984b598)]
+
+### Miscellaneous
+
+- 🚧 start testing suite [[cfa67cd](https://github.com/martinrebo/boilerplate/commit/cfa67cd379107fc057070a7b504d02fc08e65b29)]
+- 📝 Add documentation [[0558c50](https://github.com/martinrebo/boilerplate/commit/0558c50b67ef5ae1a7f447ff04133e55ef7f6555)]
+- 🚧 add route and files [[e136f22](https://github.com/martinrebo/boilerplate/commit/e136f22b7be9155ff37bbe1ccb09204a06827eb9)]
+- 📝 add softonic docs [[6458be7](https://github.com/martinrebo/boilerplate/commit/6458be7086a1035d858bdcfaf5de321b326b2096)]
+-  Merge pull request [#37](https://github.com/martinrebo/boilerplate/issues/37) from martinrebo/issue-36-_Create_UI [[965fb47](https://github.com/martinrebo/boilerplate/commit/965fb476bd18b6dca2cf79e2221aa10409e7f14e)]
+- 🚀 redo cloud build [[358ae84](https://github.com/martinrebo/boilerplate/commit/358ae841b8d08c987b1910cfdaa4dcc4dd089459)]
 
 
 <a name="0.4.5"></a>
