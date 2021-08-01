@@ -11,23 +11,22 @@ Write a NodeJS API service named **Softonic API** (in the folder `softonic-api`)
 
 
  */
-
+const options = {method: 'get',
+headers: { 'Accept': 'application/json',
+'Access-Control-Allow-Origin':'*',
+'Content-Type': 'applications/json' }}
 
 export const getProgramList = async (req: Request, res: Response) => {
     console.log("getprogramList")
 
     try {
 
-        let devData = await fetch("https://storage.googleapis.com/softonic/developers.json",{method: 'get',
-        headers: { 'Accept': 'application/json',
-        'Access-Control-Allow-Origin':'*',
-        'Content-Type': 'applications/json' }})
-        let programsData = await fetch('https://storage.googleapis.com/softonic/developers.json',{method: 'get',
-        headers: { 'Accept': 'application/json',
-        'Access-Control-Allow-Origin':'*',
-        'Content-Type': 'applications/json' }})
+        let devData = await fetch("https://storage.googleapis.com/softonic/developers.json", options)
+        let programsData = await fetch('https://storage.googleapis.com/softonic/programs.json', options)
         let devs = await devData.json()
         let programs = await programsData.json()
+
+        console.log("DEVS", devs)
 
         // https://stackoverflow.com/questions/63616406/how-to-merge-two-array-of-objects-based-on-same-key-and-value-in-javascript
         // https://stackoverflow.com/questions/4647817/javascript-object-rename-key
@@ -55,19 +54,13 @@ export const getProgram = async (req: Request, res: Response) => {
 console.log("getprogram")
     try {
 
-        let devData = await fetch("https://storage.googleapis.com/softonic/developers.json",{method: 'get',
-        headers: { 'Accept': 'application/json',
-        'Access-Control-Allow-Origin':'*',
-        'Content-Type': 'applications/json' }})
-        let programsData = await fetch('https://storage.googleapis.com/softonic/developers.json',{method: 'get',
-        headers: { 'Accept': 'application/json',
-        'Access-Control-Allow-Origin':'*',
-        'Content-Type': 'applications/json' }})
+        let devData = await fetch("https://storage.googleapis.com/softonic/developers.json", options)
+        let programsData = await fetch('https://storage.googleapis.com/softonic/programs.json', options)
 
         let devs = await devData.json()
         let programs = await programsData.json()
 
-        // console.log("data devs", devs , "programs", programs)
+        console.log("data devs", devs , "programs", programs)
 
         // find program by id 
         console.log("find program by id", programs)

@@ -1,4 +1,4 @@
-import bodyParser from 'body-parser';
+
 import express from 'express';
 import cors from 'cors';
 
@@ -17,6 +17,7 @@ const path = require('path');
 const app = express();
 const port = process.env.PORT || 5000;
 
+app.use(cors());
 
  //@ts-ignore https://github.com/expressjs/express/issues/4618
 
@@ -25,7 +26,7 @@ const port = process.env.PORT || 5000;
  app.use(express.json());
   //@ts-ignore https://github.com/expressjs/express/issues/4618
  app.use(express.urlencoded())
-app.use(cors());
+
 app.use(express.static(path.join(__dirname, 'build/')));
 
  
