@@ -9,5 +9,5 @@
       "skipLibCheck": true,
       "outDir": "../PROD"
     },
-    "include": ["routes/**/*", "server.ts", "__tests__/*.test.ts"]
+    "include": ["routes/**/*", "server.ts", "__tests__/*.test.ts", "softonic/softonic.test.ts", "softonic/softonic.route.ts"]
   }

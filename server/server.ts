@@ -5,10 +5,8 @@ import cors from 'cors';
 import {connectDb} from './models';
  
 import  { getRickMortyApi, postFavs  } from './routes/rickMorty.route'
-import {getProgramList, getProgram} from './routes/softonic.route'
+import {getProgramList, getProgram} from './softonic/softonic.route'
 import {getTest} from './routes/test.route'
-
-// import { getTest , postTest } from './routes/tests';
 
 import authFirebase from './middleware/firebaseauth'
  
@@ -20,9 +18,6 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 
  //@ts-ignore https://github.com/expressjs/express/issues/4618
-
- //@ts-ignore https://github.com/expressjs/express/issues/4618
-
  app.use(express.json());
   //@ts-ignore https://github.com/expressjs/express/issues/4618
  app.use(express.urlencoded())
@@ -38,7 +33,7 @@ app.use(authFirebase)
 app.get('/api/characters/', authFirebase,  getRickMortyApi)
 app.post('/api/characters/favs/', authFirebase,  postFavs)
 
-// Softonic Tecnical Test 
+// Softonic API Tecnical Test 
 app.get('/api/softonic/programs/',  getProgramList)
 app.get('/api/softonic/programs/:id',  getProgram)
 

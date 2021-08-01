@@ -18,7 +18,7 @@ describe("GET /programs", function () {
     expect(response.body.data.id).to.eql("21824");
   });
 
-  it("returns error 404 of program not found, ", async function () {
+  it("returns error 404 if program not found, ", async function () {
     const response = await request.get("/programs/21824d");
 
     expect(response.status).to.eql(404);

@@ -30,7 +30,7 @@
     "deploy": "gcloud app deploy PROD/app.yaml",
     "build": "react-scripts build && mkdir PROD && mv build PROD/build && tsc -p server/ && cp package.json PROD/package.json && cp app.yaml PROD/app.yaml ",
     "test": "react-scripts test ",
-    "test-server": "npx mocha ./server/__tests__/*.test.ts",
+    "test-server": "npx mocha ./server/softonic/*.test.ts",
     "eject": "react-scripts eject",
     "analyze": "source-map-explorer 'PROD/build/static/js/*.js'",
     "create-env": "printenv > .env"

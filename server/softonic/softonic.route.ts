@@ -17,19 +17,12 @@ headers: { 'Accept': 'application/json',
 'Content-Type': 'applications/json' }}
 
 export const getProgramList = async (req: Request, res: Response) => {
-    console.log("getprogramList")
-
     try {
 
         let devData = await fetch("https://storage.googleapis.com/softonic/developers.json", options)
         let programsData = await fetch('https://storage.googleapis.com/softonic/programs.json', options)
         let devs = await devData.json()
         let programs = await programsData.json()
-
-        console.log("DEVS", devs)
-
-        // https://stackoverflow.com/questions/63616406/how-to-merge-two-array-of-objects-based-on-same-key-and-value-in-javascript
-        // https://stackoverflow.com/questions/4647817/javascript-object-rename-key
 
         const data = programs.map(program => {
             // I suppose that the id property can be a string of numbers and/or letters - So I compare the strings
@@ -51,7 +44,7 @@ export const getProgramList = async (req: Request, res: Response) => {
 };
 
 export const getProgram = async (req: Request, res: Response) => {
-console.log("getprogram")
+
     try {
 
         let devData = await fetch("https://storage.googleapis.com/softonic/developers.json", options)
@@ -60,11 +53,6 @@ console.log("getprogram")
         let devs = await devData.json()
         let programs = await programsData.json()
 
-        console.log("data devs", devs , "programs", programs)
-
-        // find program by id 
-        console.log("find program by id", programs)
-        // let program = programs.find(program => program.id.toString() === req.params.id.toString())
         let program = programs.find(program => program.id.toString() === req.params.id.toString())
         // get author info
 
